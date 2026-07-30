@@ -20,7 +20,7 @@ header{background:rgba(8,11,17,0.9);border-bottom:1px solid rgba(42,46,61,0.5);p
 
 /* Hero */
 .hero{text-align:center;padding:100px 0 80px;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;
+.hero{text-align:center;padding:100px 0 80px;position:relative;overflow:hidden}.hero-inner{position:relative;z-index:1}
 background:radial-gradient(ellipse at center,rgba(59,130,246,0.08) 0%,rgba(139,92,246,0.05) 30%,transparent 60%);
 animation:heroGlow 8s ease-in-out infinite alternate}
 @keyframes heroGlow{0%{transform:translate(0,0)}100%{transform:translate(-5%,-5%)}}
@@ -139,7 +139,7 @@ footer a{color:#60A5FA;text-decoration:none}
 </div>
 </header>
 
-<section class="hero">
+<section class="hero"><div class="hero-inner">
 <div class="container">
   <h1><span>ZFY 至尊AI工具包</span></h1>
   <p>一站式 ComfyUI 整合方案 — 文生图 · 视频生成 · 语音克隆 · 动作迁移<br>即开即用 · 持续更新 · 云端授权</p>
