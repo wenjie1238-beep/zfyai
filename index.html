@@ -206,6 +206,73 @@ footer a{color:#60A5FA;text-decoration:none}
   </div>
 </div>
 </section>
+<section class="section" id="diff">
+<div class="container">
+  <h2 class="section-title">🔥 与全网其他整合包有什么不同？</h2>
+  <p class="section-sub">真正的「开箱即用」，不是把开源项目打包就卖</p>
+
+  <div style="background:#151923;border:1px solid #2A2E3D;border-radius:12px;overflow:hidden;margin-bottom:24px">
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <thead>
+        <tr style="background:#0F1119">
+          <th style="padding:14px 16px;text-align:left;color:#94A3B8;font-weight:600;border-bottom:1px solid #2A2E3D">对比项</th>
+          <th style="padding:14px 16px;text-align:center;color:#60A5FA;font-weight:700;border-bottom:1px solid #2A2E3D;background:rgba(59,130,246,0.05)">✅ ZFY-至尊版</th>
+          <th style="padding:14px 16px;text-align:center;color:#EF4444;font-weight:600;border-bottom:1px solid #2A2E3D">❌ 其他整合包</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:12px 16px;border-bottom:1px solid #1E293B;color:#E2E8F0;font-weight:500">启动方式</td>
+          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#34D399"><strong>自研图形启动器</strong><br><span style="font-size:11px;color:#64748B">一键启停 · 硬件监控 · 运行日志</span></td>
+          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#94A3B8">批处理 .bat 文件<br><span style="font-size:11px;color:#475569">黑窗口，无监控，简陋</span></td>
+        </tr>
+        <tr style="background:rgba(0,0,0,0.1)">
+          <td style="padding:12px 16px;border-bottom:1px solid #1E293B;color:#E2E8F0;font-weight:500">注意力加速</td>
+          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#34D399"><strong>SageAttention 全局加速 3x</strong><br><span style="font-size:11px;color:#64748B">VAE + 主模型 + 全局补丁全覆盖</span></td>
+          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#94A3B8">无 或 需手动配置<br><span style="font-size:11px;color:#475569">VAE 解码还是慢的 PyTorch SDPA</span></td>
+        </tr>
+        <tr>
+          <td style="padding:12px 16px;border-bottom:1px solid #1E293B;color:#E2E8F0;font-weight:500">环境变量优化</td>
+          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#34D399"><strong>全自动调优</strong><br><span style="font-size:11px;color:#64748B">OMP=24 · NUMEXPR=24 · expandable_segments<br>TF32 · cuDNN Benchmark · prestartup 脚本</span></td>
+          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#94A3B8">无 或 默认设置<br><span style="font-size:11px;color:#475569">NumExpr 只有 16 线程，TF32 没开</span></td>
+        </tr>
+        <tr style="background:rgba(0,0,0,0.1)">
+          <td style="padding:12px 16px;border-bottom:1px solid #1E293B;color:#E2E8F0;font-weight:500">授权系统</td>
+          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#34D399"><strong>自研云端授权</strong><br><span style="font-size:11px;color:#64748B">Cloudflare Worker 验证 · 即时撤销<br>支持离线缓存 · 安全可控</span></td>
+          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#94A3B8">本地文件校验 或 无授权<br><span style="font-size:11px;color:#475569">容易被破解，无法管控</span></td>
+        </tr>
+        <tr>
+          <td style="padding:12px 16px;border-bottom:1px solid #1E293B;color:#E2E8F0;font-weight:500">工作流数量</td>
+          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#34D399"><strong>100+ 精选工作流</strong><br><span style="font-size:11px;color:#64748B">持续更新，覆盖全场景</span></td>
+          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#94A3B8">10-30 个基础工作流<br><span style="font-size:11px;color:#475569">基本功能，无更新</span></td>
+        </tr>
+        <tr style="background:rgba(0,0,0,0.1)">
+          <td style="padding:12px 16px;border-bottom:1px solid #1E293B;color:#E2E8F0;font-weight:500">模型与节点</td>
+          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#34D399"><strong>150+ 节点预装</strong><br><span style="font-size:11px;color:#64748B">ControlNet · EasyUse · IP-Adapter 等<br>模型 + 环境 全集成</span></td>
+          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#94A3B8">仅基础节点<br><span style="font-size:11px;color:#475569">需要自己下载模型和插件</span></td>
+        </tr>
+        <tr>
+          <td style="padding:12px 16px;border-bottom:1px solid #1E293B;color:#E2E8F0;font-weight:500">第三方信息</td>
+          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#34D399"><strong>零第三方推广</strong><br><span style="font-size:11px;color:#64748B">无他人联系方式 · 无他人网站链接<br>纯净 ZFY 品牌</span></td>
+          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#94A3B8">包含原作者推广信息<br><span style="font-size:11px;color:#475569">别人微信/网站/B站链接</span></td>
+        </tr>
+        <tr style="background:rgba(0,0,0,0.1)">
+          <td style="padding:12px 16px;color:#E2E8F0;font-weight:500">显卡优化</td>
+          <td style="padding:12px 16px;text-align:center;color:#34D399"><strong>NVIDIA 50 系专属优化</strong><br><span style="font-size:11px;color:#64748B">Nunchaku 量化 · 低显存模式</span></td>
+          <td style="padding:12px 16px;text-align:center;color:#94A3B8">通用配置，无针对性优化</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="background:linear-gradient(135deg,rgba(59,130,246,0.05),rgba(139,92,246,0.05));border:1px solid #2A2E3D;border-radius:10px;padding:24px;text-align:center">
+    <p style="font-size:15px;color:#E2E8F0;line-height:1.7">
+      💡 <strong style="color:#60A5FA">总结：</strong>ZFY-至尊版 不是简单的开源项目打包，而是<strong style="color:#E2E8F0">从启动器到底层加速、从授权系统到工作流</strong>全都自研自建的完整产品。<br>
+      市面上找不到第二套同样水平的 ComfyUI 整合方案。
+    </p>
+  </div>
+</div>
+</section>
 
 <section class="section" id="products">
 <div class="container">
