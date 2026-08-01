@@ -1,412 +1,237 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZFY-AI | 至尊AI工具包</title>
+<title>ZFY 至尊AI工具包</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#080B11;color:#E2E8F0;font-family:'Inter','Microsoft YaHei UI',sans-serif;overflow-x:hidden}
-.container{max-width:1200px;margin:0 auto;padding:0 20px}
-
-/* Header */
-header{background:rgba(8,11,17,0.9);border-bottom:1px solid rgba(42,46,61,0.5);padding:14px 0;position:sticky;top:0;z-index:100;backdrop-filter:blur(20px)}
-.header-inner{display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:20px;font-weight:800;color:#60A5FA;display:flex;align-items:center;gap:8px}
-.logo-icon{width:32px;height:32px;background:linear-gradient(135deg,#3B82F6,#8B5CF6);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff}
-.nav a{color:#64748B;text-decoration:none;margin-left:20px;font-size:13px;font-weight:500;transition:color .2s}
-.nav a:hover{color:#E2E8F0}
-
-/* Hero */
-.hero{text-align:center;padding:100px 0 80px;position:relative;overflow:hidden}
-.hero{text-align:center;padding:100px 0 80px;position:relative;overflow:hidden}.hero-inner{position:relative;z-index:1}
-background:radial-gradient(ellipse at center,rgba(59,130,246,0.08) 0%,rgba(139,92,246,0.05) 30%,transparent 60%);
-animation:heroGlow 8s ease-in-out infinite alternate}
-@keyframes heroGlow{0%{transform:translate(0,0)}100%{transform:translate(-5%,-5%)}}
-.hero h1{font-size:52px;font-weight:900;line-height:1.1;margin-bottom:16px;position:relative}
-.hero h1 span{background:linear-gradient(135deg,#60A5FA,#A78BFA,#F472B6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{color:#64748B;font-size:17px;max-width:560px;margin:0 auto 32px;line-height:1.7;position:relative}
-.hero-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative}
-
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;transition:all .3s;border:none;cursor:pointer}
-.btn-primary{background:linear-gradient(135deg,#2563EB,#7C3AED);color:#fff;box-shadow:0 4px 20px rgba(37,99,235,0.3)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(37,99,235,0.4)}
-.btn-wx{background:linear-gradient(135deg,#059669,#10B981);color:#fff;box-shadow:0 4px 20px rgba(5,150,105,0.3)}
-.btn-wx:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(5,150,105,0.4)}
-
-/* Stats */
-.stats{display:flex;justify-content:center;gap:40px;margin-top:48px;position:relative;flex-wrap:wrap}
-.stat{text-align:center}
-.stat-num{font-size:32px;font-weight:800;color:#E2E8F0}
-.stat-label{font-size:13px;color:#64748B;margin-top:4px}
-
-/* Section */
-.section{padding:60px 0}
-.section-title{font-size:28px;font-weight:800;margin-bottom:6px;text-align:center}
-.section-sub{color:#64748B;font-size:15px;margin-bottom:40px;text-align:center}
-
-/* Showcase Grid - 效果展示 */
-.showcase-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-bottom:40px}
-.showcase-card{background:linear-gradient(135deg,#151923,#1a1d2b);border:1px solid #2A2E3D;border-radius:12px;overflow:hidden;transition:all .3s;cursor:pointer}
-.showcase-card:hover{border-color:#3B82F6;transform:translateY(-4px);box-shadow:0 12px 40px rgba(59,130,246,0.1)}
-.showcase-img{width:100%;height:180px;background:linear-gradient(135deg,#1a1d2b,#252940);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.showcase-img .placeholder{text-align:center;color:#2A2E3D}
-.showcase-img .placeholder .icon{font-size:48px;display:block;margin-bottom:8px}
-.showcase-img .placeholder .text{font-size:11px;color:#334155}
-.showcase-card:hover .showcase-img{background:linear-gradient(135deg,#1e2235,#2d3250)}
-.showcase-info{padding:14px}
-.showcase-info h4{font-size:14px;font-weight:600;margin-bottom:4px}
-.showcase-info p{font-size:12px;color:#64748B}
-
-/* Product Grid */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:14px}
-.card{background:#151923;border:1px solid #2A2E3D;border-radius:10px;padding:20px;transition:all .3s}
-.card:hover{border-color:#3B82F6;transform:translateY(-2px);box-shadow:0 8px 24px rgba(59,130,246,0.08)}
-.card-tag{display:inline-block;background:rgba(59,130,246,0.1);color:#60A5FA;font-size:11px;padding:2px 10px;border-radius:4px;margin-right:4px;margin-bottom:6px;font-weight:500}
-.card h3{font-size:16px;font-weight:700;margin:8px 0 6px}
-.card p{color:#94A3B8;font-size:13px;line-height:1.5;margin-bottom:8px}
-.card-detail{font-size:12px;color:#64748B;line-height:1.5;padding:8px 10px;background:rgba(0,0,0,0.2);border-radius:6px;margin-bottom:8px}
-.card-detail strong{color:#E2E8F0}
-.card-tags{font-size:11px;margin-bottom:8px;line-height:1.8}
-.card-tags span{display:inline-block;background:#0F1119;padding:1px 6px;border-radius:3px;margin:1px 2px;font-size:10px;color:#94A3B8;border:1px solid #1E293B}
-.card-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid #1E293B;margin-top:4px}
-.card-price{font-size:17px;font-weight:700;color:#60A5FA;font-weight:600}.card-req{display:inline-block;background:rgba(16,185,129,0.1);color:#34D399;font-size:11px;padding:2px 8px;border-radius:4px;margin-left:4px;font-weight:500}
-
-/* Supreme */
-.supreme{background:linear-gradient(135deg,#151923 0%,#1a1a3e 100%);border:2px solid #3B82F6;border-radius:12px;padding:36px;margin-bottom:36px;position:relative;overflow:hidden}
-.supreme-badge{display:inline-block;background:linear-gradient(135deg,#2563EB,#7C3AED);color:#fff;font-size:11px;padding:3px 12px;border-radius:4px;margin-bottom:10px;font-weight:600}
-.supreme h2{font-size:26px;font-weight:800;color:#60A5FA;margin-bottom:6px}
-.supreme .sub{color:#94A3B8;margin-bottom:20px;font-size:14px}
-.supreme-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.su-list{list-style:none}
-.su-list li{color:#E2E8F0;padding:5px 0;padding-left:20px;position:relative;font-size:13px}
-.su-list li::before{content:"✅";position:absolute;left:0}
-.supreme-price{text-align:center;margin-top:20px;font-size:20px;font-weight:700;color:#60A5FA}
-
-/* Advantage */
-.adv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:12px;margin-bottom:24px}
-.adv-item{background:#151923;border:1px solid #2A2E3D;border-radius:10px;padding:20px;text-align:center;transition:all .3s}
-.adv-item:hover{border-color:#3B82F6;transform:translateY(-2px)}
-.adv-icon{font-size:32px;margin-bottom:8px}
-.adv-item h4{font-size:14px;font-weight:600;margin-bottom:4px;color:#E2E8F0}
-.adv-item p{font-size:12px;color:#64748B;line-height:1.5}
-
-/* How it works */
-.steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-bottom:24px}
-.step{background:#151923;border:1px solid #2A2E3D;border-radius:10px;padding:24px;text-align:center;transition:all .3s}
-.step:hover{border-color:#3B82F6}
-.step-num{width:36px;height:36px;background:linear-gradient(135deg,#2563EB,#7C3AED);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:14px;font-weight:700;color:#fff}
-.step h4{font-size:14px;font-weight:600;margin-bottom:6px}
-.step p{font-size:12px;color:#64748B;line-height:1.5}
-
-/* Contact */
-.contact-box{background:#151923;border:1px solid #2A2E3D;border-radius:12px;padding:40px;text-align:center;margin:40px 0}
-.contact-box h3{font-size:22px;font-weight:700;margin-bottom:6px}
-.contact-box p{color:#94A3B8;margin-bottom:24px;font-size:14px}
-.wx-info{display:inline-block;background:#0F1119;border:1px solid #334155;border-radius:8px;padding:14px 36px;margin-bottom:16px}
-.wx-info span{font-size:20px;font-weight:700;color:#34D399;letter-spacing:2px}
-
-/* Footer */
-footer{text-align:center;padding:32px 0;border-top:1px solid #2A2E3D;color:#64748B;font-size:12px;margin-top:40px}
-footer a{color:#60A5FA;text-decoration:none}
-
-@media(max-width:768px){
-  .hero h1{font-size:32px}
-  .hero{padding:60px 0 40px}
-  .supreme-grid,.adv-grid{grid-template-columns:1fr}
+:root{--bg:#070c14;--panel:#0d1520;--panel2:#101b2b;--line:#1d2c40;--green:#18d464;--cyan:#72ffd7;--orange:#ffb454;--text:#e8f0f8;--muted:#93a7bd}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"Inter","PingFang SC","Microsoft YaHei UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(7,12,20,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
+.brand .dot{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--green),var(--cyan));display:grid;place-items:center;font-size:16px}
+.wechat-pill{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#03240f;font-weight:700;padding:8px 14px;border-radius:8px;font-size:14px}
+.hero{position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,12,20,.62),rgba(7,12,20,.94))}
+.hero .content{position:relative;z-index:2;padding:70px 20px}
+.hero h1{font-size:clamp(34px,6vw,62px);line-height:1.12;letter-spacing:0;margin:14px 0 18px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--green),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:clamp(15px,2.2vw,19px);color:#d6e4f2;max-width:680px}
+.hero .cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:8px;font-weight:700;font-size:15px}
+.btn-green{background:var(--green);color:#03240f}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.25)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:44px auto 0}
+.stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:16px 10px;text-align:center}
+.stat b{display:block;font-size:26px;color:var(--cyan)}
+.stat span{font-size:13px;color:#cfe0ef}
+.section{padding:70px 0}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:28px}
+.section-head h2{font-size:clamp(24px,3.6vw,34px)}
+.section-head p{color:var(--muted);max-width:560px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+.card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.card.flagship{grid-column:1/-1;background:linear-gradient(135deg,#0c2b1d,#10263d);border-color:#1e5c3a}
+.card-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.card h3{font-size:18px;line-height:1.35}
+.card .ver{color:var(--orange);font-weight:700;white-space:nowrap}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:12px;padding:4px 9px;border-radius:6px;background:rgba(114,255,215,.09);color:var(--cyan);border:1px solid rgba(114,255,215,.22)}
+.tag.ram{background:rgba(255,180,84,.1);color:var(--orange);border-color:rgba(255,180,84,.25)}
+.core{font-size:14px;color:#cfe0ef}
+.core b{color:#fff}
+.feat{font-size:13px;color:var(--muted)}
+.feat span{color:#bcd2e6}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px}
+.step .n{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(135deg,var(--green),var(--cyan));color:#03240f;font-weight:800;margin-bottom:12px}
+.step h4{margin-bottom:6px;font-size:15px}
+.step p{font-size:13px;color:var(--muted)}
+.service{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.svc{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px}
+.svc .ic{font-size:26px}
+.svc h4{margin:10px 0 6px;font-size:15px}
+.svc p{font-size:13px;color:var(--muted)}
+.footer{background:#04070c;border-top:1px solid var(--line);padding:48px 0}
+.footer .contact{text-align:center}
+.footer .big{display:inline-flex;align-items:center;gap:12px;font-size:clamp(20px,4vw,30px);font-weight:800;background:linear-gradient(90deg,var(--green),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;margin:14px 0 6px}
+.footer .hint{color:var(--muted);font-size:14px}
+@media (max-width:760px){
+  .hero{min-height:520px}
+  .stats{grid-template-columns:repeat(2,1fr)}
   .grid{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr 1fr}
-  .showcase-grid{grid-template-columns:1fr 1fr}
-  .header-inner{flex-direction:column;gap:10px}
-  .nav a{margin:0 8px;font-size:12px}
-  .stats{gap:20px}
+  .topbar .wechat-pill{font-size:13px;padding:7px 10px}
+  .brand .name{display:none}
 }
 </style>
 </head>
 <body>
-
-<header>
-<div class="container header-inner">
-  <div class="logo"><span class="logo-icon">Z</span> ZFY <span style="font-weight:400;color:#64748B">AI</span></div>
-  <nav class="nav">
-    <a href="#showcase">效果</a>
-    <a href="#supreme">至尊版</a>
-    <a href="#products">产品</a>
-    <a href="#how">使用</a>
-    <a href="#contact">联系</a>
-  </nav>
-</div>
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand"><span class="dot">Z</span><span class="name">ZFY 至尊AI工具包</span></div>
+    <a class="wechat-pill" href="weixin://">微信咨询 · ZFY-AI160</a>
+  </div>
 </header>
 
-<section class="hero"><div class="hero-inner">
-<div class="container">
-  <h1><span>ZFY 至尊AI工具包</span></h1>
-  <p>一站式 ComfyUI 整合方案 — 文生图 · 视频生成 · 语音克隆 · 动作迁移<br>即开即用 · 持续更新 · 云端授权</p>
-  <div class="hero-buttons">
-    <a href="#products" class="btn btn-primary">📦 查看全部产品</a>
-    <a href="#contact" class="btn btn-wx">💬 微信咨询</a>
-  </div>
-  <div class="stats">
-    <div class="stat"><div class="stat-num">13</div><div class="stat-label">整合包数量</div></div>
-    <div class="stat"><div class="stat-num">150+</div><div class="stat-label">预装节点</div></div>
-    <div class="stat"><div class="stat-num">100+</div><div class="stat-label">精选工作流</div></div>
-    <div class="stat"><div class="stat-num">⚡3x</div><div class="stat-label">Sage加速</div></div>
-  </div>
-</div>
-</section>
-
-<!-- 效果展示 -->
-<section class="section" id="showcase">
-<div class="container">
-  <h2 class="section-title">🎨 效果展示</h2>
-  <p class="section-sub">用 ZFY 工具包生成的AI作品 — 点击/拖拽可替换为你自己的效果图</p>
-  <div class="showcase-grid">
-    <div class="showcase-card"><div class="showcase-img"><div class="placeholder"><span class="icon">🎬</span><span class="text">视频生成</span></div></div><div class="showcase-info"><h4>LTX2.3 视频生成</h4><p>文生视频 · 图生视频 · 音频同步</p></div></div>
-    <div class="showcase-card"><div class="showcase-img"><div class="placeholder"><span class="icon">🖼️</span><span class="text">文生图</span></div></div><div class="showcase-info"><h4>FLUX / Z-Image 文生图</h4><p>高质量图片生成</p></div></div>
-    <div class="showcase-card"><div class="showcase-img"><div class="placeholder"><span class="icon">🎤</span><span class="text">语音克隆</span></div></div><div class="showcase-info"><h4>Qwen3-TTS 语音克隆</h4><p>声音克隆 · 多人对话</p></div></div>
-    <div class="showcase-card"><div class="showcase-img"><div class="placeholder"><span class="icon">🏃</span><span class="text">动作迁移</span></div></div><div class="showcase-info"><h4>SCAIL2 动作迁移</h4><p>人物替换 · 动作迁移</p></div></div>
-    <div class="showcase-card"><div class="showcase-img"><div class="placeholder"><span class="icon">✏️</span><span class="text">图像编辑</span></div></div><div class="showcase-info"><h4>Qwen-Edit 万物迁移</h4><p>换装 · 修手 · 去水印</p></div></div>
-    <div class="showcase-card"><div class="showcase-img"><div class="placeholder"><span class="icon">🗣️</span><span class="text">数字人</span></div></div><div class="showcase-info"><h4>InfiniteTalk 数字人</h4><p>对口型 · 数字人视频</p></div></div>
-  </div>
-</div>
-</section>
-
-<section class="section" id="supreme">
-<div class="container">
-  <div class="supreme">
-    <span class="supreme-badge">🏆 旗舰产品</span>
-    <h2>ZFY-至尊版 全功能整合包</h2>
-    <p class="sub">ComfyUI 旗舰整合 · SageAttention 加速 · 150+ 节点 · 100+ 工作流</p>
-    <div class="supreme-grid">
-      <div>
-        <ul class="su-list">
-          <li><strong>视频生成</strong> — LTX2.3 / Wan2.2 文生视频、图生视频、首尾帧</li>
-          <li><strong>图片生成</strong> — FLUX / Z-Image / Krea2 高质量文生图</li>
-          <li><strong>语音克隆</strong> — Qwen3-TTS / IndexTTS2 声音克隆、情绪控制</li>
-          <li><strong>动作迁移</strong> — SCAIL2 / WanAnimate 人物替换、动作迁移</li>
-          <li><strong>图像编辑</strong> — Qwen-Edit 万物迁移、换装、修手、去水印</li>
-          <li><strong>数字人</strong> — InfiniteTalk 对口型、数字人视频生成</li>
-          <li><strong>视频特效</strong> — FUSIONX 喷火/换发型/核爆等创意特效</li>
-        </ul>
-      </div>
-      <div>
-        <ul class="su-list">
-          <li>🎮 建议配置: 12G+ 显存 · 32G+ 内存 · SageAttention 全局加速 3x + TF32 优化</li>
-          <li>云端授权验证，安全可控</li>
-          <li>一键启动 · 硬件监控 · 运行日志</li>
-          <li>模型管理 · 一键更新 · 环境诊断</li>
-          <li>100+ 精选工作流，持续更新</li>
-          <li>150+ 自定义节点预装，独立 Python 环境</li>
-          <li>50 系显卡深度优化</li>
-        </ul>
-      </div>
+<section class="hero">
+  <img src="hero.jpg" alt="ZFY AI 工具包">
+  <div class="wrap content">
+    <p>一站式 ComfyUI 整合方案</p>
+    <h1>文生图 · 视频生成<br><em>语音克隆 · 动作迁移</em></h1>
+    <p>13 套独立整合包，解压即用，每套都带独立 Python 环境、预装节点、精选工作流和云端授权验证。</p>
+    <div class="cta">
+      <a class="btn btn-green" href="#products">查看全部产品</a>
+      <a class="btn btn-ghost" href="weixin://">添加 ZFY-AI160 购买</a>
     </div>
-    <div class="supreme-price">详询价格 · 微信: ZFY-AI160</div>
+    <div class="stats">
+      <div class="stat"><b>13</b><span>整合包数量</span></div>
+      <div class="stat"><b>150+</b><span>预装节点</span></div>
+      <div class="stat"><b>100+</b><span>精选工作流</span></div>
+      <div class="stat"><b>3x</b><span>Sage 加速</span></div>
+    </div>
   </div>
-</div>
-</section>
-<section class="section" id="diff">
-<div class="container">
-  <h2 class="section-title">🔥 与全网其他整合包有什么不同？</h2>
-  <p class="section-sub">真正的「开箱即用」，不是把开源项目打包就卖</p>
-
-  <div style="background:#151923;border:1px solid #2A2E3D;border-radius:12px;overflow:hidden;margin-bottom:24px">
-    <table style="width:100%;border-collapse:collapse;font-size:13px">
-      <thead>
-        <tr style="background:#0F1119">
-          <th style="padding:14px 16px;text-align:left;color:#94A3B8;font-weight:600;border-bottom:1px solid #2A2E3D">对比项</th>
-          <th style="padding:14px 16px;text-align:center;color:#60A5FA;font-weight:700;border-bottom:1px solid #2A2E3D;background:rgba(59,130,246,0.05)">✅ ZFY-至尊版</th>
-          <th style="padding:14px 16px;text-align:center;color:#EF4444;font-weight:600;border-bottom:1px solid #2A2E3D">❌ 其他整合包</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="padding:12px 16px;border-bottom:1px solid #1E293B;color:#E2E8F0;font-weight:500">启动方式</td>
-          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#34D399"><strong>自研图形启动器</strong><br><span style="font-size:11px;color:#64748B">一键启停 · 硬件监控 · 运行日志</span></td>
-          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#94A3B8">批处理 .bat 文件<br><span style="font-size:11px;color:#475569">黑窗口，无监控，简陋</span></td>
-        </tr>
-        <tr style="background:rgba(0,0,0,0.1)">
-          <td style="padding:12px 16px;border-bottom:1px solid #1E293B;color:#E2E8F0;font-weight:500">注意力加速</td>
-          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#34D399"><strong>SageAttention 全局加速 3x</strong><br><span style="font-size:11px;color:#64748B">VAE + 主模型 + 全局补丁全覆盖</span></td>
-          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#94A3B8">无 或 需手动配置<br><span style="font-size:11px;color:#475569">VAE 解码还是慢的 PyTorch SDPA</span></td>
-        </tr>
-        <tr>
-          <td style="padding:12px 16px;border-bottom:1px solid #1E293B;color:#E2E8F0;font-weight:500">环境变量优化</td>
-          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#34D399"><strong>全自动调优</strong><br><span style="font-size:11px;color:#64748B">OMP=24 · NUMEXPR=24 · expandable_segments<br>TF32 · cuDNN Benchmark · prestartup 脚本</span></td>
-          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#94A3B8">无 或 默认设置<br><span style="font-size:11px;color:#475569">NumExpr 只有 16 线程，TF32 没开</span></td>
-        </tr>
-        <tr style="background:rgba(0,0,0,0.1)">
-          <td style="padding:12px 16px;border-bottom:1px solid #1E293B;color:#E2E8F0;font-weight:500">授权系统</td>
-          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#34D399"><strong>自研云端授权</strong><br><span style="font-size:11px;color:#64748B">Cloudflare Worker 验证 · 即时撤销<br>支持离线缓存 · 安全可控</span></td>
-          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#94A3B8">本地文件校验 或 无授权<br><span style="font-size:11px;color:#475569">容易被破解，无法管控</span></td>
-        </tr>
-        <tr>
-          <td style="padding:12px 16px;border-bottom:1px solid #1E293B;color:#E2E8F0;font-weight:500">工作流数量</td>
-          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#34D399"><strong>100+ 精选工作流</strong><br><span style="font-size:11px;color:#64748B">持续更新，覆盖全场景</span></td>
-          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#94A3B8">10-30 个基础工作流<br><span style="font-size:11px;color:#475569">基本功能，无更新</span></td>
-        </tr>
-        <tr style="background:rgba(0,0,0,0.1)">
-          <td style="padding:12px 16px;border-bottom:1px solid #1E293B;color:#E2E8F0;font-weight:500">模型与节点</td>
-          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#34D399"><strong>150+ 节点预装</strong><br><span style="font-size:11px;color:#64748B">ControlNet · EasyUse · IP-Adapter 等<br>模型 + 环境 全集成</span></td>
-          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#94A3B8">仅基础节点<br><span style="font-size:11px;color:#475569">需要自己下载模型和插件</span></td>
-        </tr>
-        <tr>
-          <td style="padding:12px 16px;border-bottom:1px solid #1E293B;color:#E2E8F0;font-weight:500">第三方信息</td>
-          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#34D399"><strong>零第三方推广</strong><br><span style="font-size:11px;color:#64748B">无他人联系方式 · 无他人网站链接<br>纯净 ZFY 品牌</span></td>
-          <td style="padding:12px 16px;text-align:center;border-bottom:1px solid #1E293B;color:#94A3B8">包含原作者推广信息<br><span style="font-size:11px;color:#475569">别人微信/网站/B站链接</span></td>
-        </tr>
-        <tr style="background:rgba(0,0,0,0.1)">
-          <td style="padding:12px 16px;color:#E2E8F0;font-weight:500">显卡优化</td>
-          <td style="padding:12px 16px;text-align:center;color:#34D399"><strong>NVIDIA 50 系专属优化</strong><br><span style="font-size:11px;color:#64748B">Nunchaku 量化 · 低显存模式</span></td>
-          <td style="padding:12px 16px;text-align:center;color:#94A3B8">通用配置，无针对性优化</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div style="background:linear-gradient(135deg,rgba(59,130,246,0.05),rgba(139,92,246,0.05));border:1px solid #2A2E3D;border-radius:10px;padding:24px;text-align:center">
-    <p style="font-size:15px;color:#E2E8F0;line-height:1.7">
-      💡 <strong style="color:#60A5FA">总结：</strong>ZFY-至尊版 不是简单的开源项目打包，而是<strong style="color:#E2E8F0">从启动器到底层加速、从授权系统到工作流</strong>全都自研自建的完整产品。<br>
-      市面上找不到第二套同样水平的 ComfyUI 整合方案。
-    </p>
-  </div>
-</div>
 </section>
 
 <section class="section" id="products">
-<div class="container">
-  <h2 class="section-title">📦 全部产品</h2>
-  <p class="section-sub">每套均为独立整合包，含 Python 环境 + 模型 + 工作流，解压即用</p>
-  <div class="grid">
-    <div class="card">
-      <span class="card-tag">视频</span><span class="card-tag">LTX2.3</span>
-      <h3>LTX2.3-v9.3 视频生成 <span class="card-req">🎮 12G显存 · 32G内存</span></h3>
-      <p>LTX 视频生成全能包，文生视频、图生视频、音频同步全覆盖</p>
-      <div class="card-detail"><strong>WebUI 功能（17项）：</strong><br>🎬 <strong>文生视频</strong> — 文字直接生成视频<br>🖼️ <strong>图生视频</strong> — 图片生成视频<br>📸 <strong>图生视频(多图参考)</strong> — 多图参考生成<br>🖼️ <strong>图生视频(多图参考2)</strong> — 多图参考2代<br>🎬 <strong>图生视频(导演分镜)</strong> — 分镜控制生成<br>🎯 <strong>图生视频(导演分镜-MSR专业版)</strong> — 专业分镜<br>🎥 <strong>视频创作(导演分镜2.0)</strong> — 新一代分镜<br>📝 <strong>图生视频(分段提示词)</strong> — 分段提示词控制<br>🔞 <strong>NSFW图生视频</strong> — 屏幕提示词模式<br>🔄 <strong>首尾帧视频</strong> — 首尾帧生成<br>🎵 <strong>音生视频</strong> — 音频驱动视频<br>🏃 <strong>动作迁移</strong> — 动作迁移<br>🎨 <strong>局部重绘</strong> — 视频局部修改<br>🧹 <strong>去水印/去字幕/去模糊</strong> — 视频修复<br>👤 <strong>视频换脸</strong> — 脸部替换<br>👥 <strong>双人对话</strong> — 双人数字人<br>📖 <strong>漫剧生成</strong> — 批量漫剧/六宫格</div>
-      <div class="card-bottom"><span class="card-price">咨询购买</span></div>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>全部产品</h2>
+      <p>每套均为独立整合包，含 Python 环境 + 模型 + 工作流，解压即用。</p>
     </div>
-    <div class="card">
-      <span class="card-tag">语音</span><span class="card-tag">TTS</span>
-      <h3>Qwen3-TTS v5.0 语音克隆 <span class="card-req">🎮 8G显存 · 16G内存</span></h3>
-      <p>最强开源语音克隆三合一，声音克隆 · 多人对话 · 情绪控制</p>
-      <div class="card-detail"><strong>WebUI 功能：</strong><br>🗣️ 声音克隆 · 🎨 音色创建 · 📚 自定义语音<br>👥 多人对话生成 · 😊 情绪控制<br>📖 全自动有声小说 · 🎭 双人对话<br>🔊 IndexTTS2 最强情感TTS · 🎙️ VoxCPM2 多引擎</div>
-      <div class="card-bottom"><span class="card-price">咨询购买</span></div>
-    </div>
-    <div class="card">
-      <span class="card-tag">动作迁移</span><span class="card-tag">视频</span>
-      <h3>SCAILV2--4.0 动作迁移 <span class="card-req">🎮 12G显存 · 32G内存</span></h3>
-      <p>SCAIL 人物替换 · 动作迁移 · 多图参考 · 换装</p>
-      <div class="card-detail"><strong>WebUI 功能（4项）：</strong><br>🏃 <strong>SCAIL人物替换/动作迁移</strong> — 基础版<br>📸 <strong>SCAIL人物替换/动作迁移(多图参考)</strong> — 多图参考版<br>🎬 <strong>SCAIL官方(多图参考)</strong> — 官方多图参考<br>👗 <strong>SCAIL TTP(多图参考|换装)</strong> — 换装专用版</div>
-      <div class="card-bottom"><span class="card-price">咨询购买</span></div>
-    </div>
-    <div class="card">
-      <span class="card-tag">图像编辑</span><span class="card-tag">换装</span>
-      <h3>Klein_EditTOP 图像编辑 <span class="card-req">🎮 12G显存 · 32G内存</span></h3>
-      <p>Flux2-Klein 9B 最强图像编辑，换装 · 重绘 · 去水印 · 线稿上色</p>
-      <div class="card-detail"><strong>WebUI 功能：</strong><br>👗 换装提取 · 🎨 局部重绘 · 🧹 去水印<br>✏️ 线稿上色 · 📦 产品精修 · 🔲 扩图<br>🔄 批量生成 · 👤 脸部替换 · 🖼️ 多图编辑<br>🖍️ 线稿转效果图 · 🎯 角色分镜批量生成</div>
-      <div class="card-bottom"><span class="card-price">咨询购买</span></div>
-    </div>
-    <div class="card">
-      <span class="card-tag">图像</span><span class="card-tag">Krea2</span>
-      <h3>krea2-3.0 文生图 <span class="card-req">🎮 12G显存 · 32G内存</span></h3>
-      <p>Krea2 文生图 · 图生图 · 图像克隆 · 参考编辑 · 3D导演台</p>
-      <div class="card-detail"><strong>WebUI 功能（8项）：</strong><br>🎨 <strong>文生图</strong> — 文字生成图片<br>🎨 <strong>文生图(加强版)</strong> — 增强生成<br>🖼️ <strong>图生图1-克隆</strong> — 图像克隆<br>🖼️ <strong>图生图2-参考</strong> — 参考图生成<br>🖼️ <strong>图生图3-编辑</strong> — 图像编辑<br>🖼️ <strong>图片编辑(Beta)</strong> — 测试版编辑<br>🖼️ <strong>图片编辑2(测试版)</strong> — 新版编辑<br>🎬 <strong>人物动作姿势(3D导演台)</strong> — 3D姿势控制</div>
-      <div class="card-bottom"><span class="card-price">咨询购买</span></div>
-    </div>
-    <div class="card">
-      <span class="card-tag">图像编辑</span><span class="card-tag">Qwen</span>
-      <h3>Qwen_ImageEdit v4.0 万物迁移 <span class="card-req">🎮 12G显存 · 32G内存</span></h3>
-      <p>Qwen-Edit 最强万物迁移 · 多角度 · 模特换装 · 姿势迁移</p>
-      <div class="card-detail"><strong>WebUI 功能：</strong><br>🔄 多角度生成 · 👗 模特换装 · 👤 脸部替换<br>🏃 姿势迁移 · 🔒 NSFW 模式 · 🖼️ 扩图<br>🎨 角色多视图 · 📋 多图编辑 · 🎯 单图编辑<br>💪 50系显卡优化 · Nunchaku 量化加速</div>
-      <div class="card-bottom"><span class="card-price">咨询购买</span></div>
-    </div>
-    <div class="card">
-      <span class="card-tag">图像</span><span class="card-tag">Z-Image</span>
-      <h3>Z-Image-White-AIO 文生图 <span class="card-req">🎮 12G显存 · 32G内存</span></h3>
-      <p>Z-Image 高质量文生图 · 反推洗稿 · 多视角 · 角色三视图</p>
-      <div class="card-detail"><strong>WebUI 功能：</strong><br>🖼️ 高质量文生图 · 🔄 图生图洗稿<br>📝 反推提示词 · 🔄 多视角生成<br>👤 角色三视图 · 🎯 多角度控制<br>🎨 LORA 风格支持 · 4K 高清输出</div>
-      <div class="card-bottom"><span class="card-price">咨询购买</span></div>
-    </div>
-    <div class="card">
-      <span class="card-tag">图像</span><span class="card-tag">超分</span>
-      <h3>Z_image_turbo v3.2 图像处理 <span class="card-req">🎮 8G显存 · 16G内存</span></h3>
-      <p>Z-Image 快速版 + FlashVSR/SeedVR 超分</p>
-      <div class="card-detail"><strong>WebUI 功能：</strong><br>🖼️ 文生图 · 🔄 图生图 · 📝 提示词管理<br>🎬 FlashVSR 极速视频超分 · 🔍 SeedVR2 高清放大<br>🎯 局部重绘 · 📦 批量处理 · 🖼️ 图像编辑</div>
-      <div class="card-bottom"><span class="card-price">咨询购买</span></div>
-    </div>
-    <div class="card">
-      <span class="card-tag">3D</span>
-      <h3>Bernini 3D 生成 <span class="card-req">🎮 12G显存 · 32G内存</span></h3>
-      <p>AI 3D 模型生成，文生3D + 图生3D</p>
-      <div class="card-detail"><strong>WebUI 功能：</strong><br>🖼️ 文生3D · 🔄 图生3D · 🎬 导演控制模式<br>🎨 多风格3D生成 · 📐 模型导出</div>
-      <div class="card-bottom"><span class="card-price">咨询购买</span></div>
-    </div>
-    <div class="card">
-      <span class="card-tag">音频</span><span class="card-tag">音乐</span>
-      <h3>ACEStep_HearMuLa 音乐生成 <span class="card-req">🎮 8G显存 · 16G内存</span></h3>
-      <p>AI 音乐/音频生成</p>
-      <div class="card-detail"><strong>WebUI 功能：</strong><br>🎵 AI 音乐生成 · 🎶 音频处理 · 🎤 歌曲制作<br>🎹 多风格音乐 · 🎛️ 音频编辑</div>
-      <div class="card-bottom"><span class="card-price">咨询购买</span></div>
-    </div>
-    <div class="card">
-      <span class="card-tag">工具</span><span class="card-tag">工作流</span>
-      <h3>NSFW_workflows 工作流套件 <span class="card-req">🎮 12G显存 · 32G内存</span></h3>
-      <p>姿势管理 + 文生图工作流集合</p>
-      <div class="card-detail"><strong>WebUI 功能：</strong><br>🧍 姿态管理 · 🖼️ 文生图 · 🔄 图生图<br>🎯 局部重绘 · 📦 批量处理 · 🔒 安全模式</div>
-      <div class="card-bottom"><span class="card-price">咨询购买</span></div>
-    </div>
-    <div class="card">
-      <span class="card-tag">语音</span><span class="card-tag">配音</span>
-      <h3>X-TTS v3.0 配音 <span class="card-req">🎮 8G显存 · 16G内存</span></h3>
-      <p>轻量级 TTS 配音工具</p>
-      <div class="card-detail"><strong>WebUI 功能：</strong><br>🗣️ 文字转语音 · 🎨 多音色选择<br>⚡ 快速生成 · 🎧 语音预览<br>📢 TTS 配音 · 🎚️ 音调速度调节</div>
-      <div class="card-bottom"><span class="card-price">咨询购买</span></div>
+    <div class="grid">
+      <article class="card flagship">
+        <div class="card-top"><h3>ZFY-至尊版 全功能整合包</h3><span class="ver">旗舰版</span></div>
+        <div class="tags"><span class="tag">12G+ 显存</span><span class="tag ram">32G+ 内存</span><span class="tag">SageAttention 3x</span><span class="tag">云端授权</span></div>
+        <div class="core"><b>核心能力：</b>LTX2.3 / Wan2.2 文生视频 · FLUX / Z-Image / Krea2 文生图 · Qwen3-TTS / IndexTTS2 语音克隆 · SCAIL2 / WanAnimate 动作迁移 · Qwen-Edit 万物迁移 · InfiniteTalk 数字人 · FUSIONX 创意特效</div>
+        <div class="feat"><span>优势：</span>100+ 精选工作流 · 150+ 自定义节点 · TF32 全开 · 50 系显卡优化 · 一键启动 · 硬件监控 · 运行日志 · 模型管理 · 一键更新 · 环境诊断 · 云端授权撤销即时生效</div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>LTX2.3</h3><span class="ver">v9.3</span></div>
+        <div class="tags"><span class="tag">视频生成</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
+        <div class="core"><b>核心功能：</b>文生视频 · 图生视频 · 音频同步</div>
+        <div class="feat"><span>WebUI 功能（17 项）：</span>文生视频 · 图生视频 · 多图参考 · 多图参考2 · 导演分镜 · 导演分镜MSR专业版 · 视频创作导演分镜2.0 · 分段提示词 · NSFW图生视频 · 首尾帧视频 · 音生视频 · 动作迁移 · 局部重绘 · 去水印/去字幕/去模糊 · 视频换脸 · 双人对话 · 漫剧生成</div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>Qwen3-TTS</h3><span class="ver">v5.0</span></div>
+        <div class="tags"><span class="tag">语音克隆</span><span class="tag">8G 显存</span><span class="tag ram">16G 内存</span></div>
+        <div class="core"><b>核心功能：</b>声音克隆 · 多人对话 · 情绪控制</div>
+        <div class="feat"><span>WebUI 功能：</span>声音克隆 · 音色创建 · 自定义语音 · 多人对话 · 情绪控制 · 全自动有声小说 · 双人对话 · IndexTTS2 · VoxCPM2 多引擎</div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>SCAILV2</h3><span class="ver">4.0</span></div>
+        <div class="tags"><span class="tag">动作迁移</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
+        <div class="core"><b>核心功能：</b>人物替换 · 动作迁移 · 多图参考 · 换装</div>
+        <div class="feat"><span>WebUI 功能（4 项）：</span>SCAIL人物替换/动作迁移 · 多图参考 · 官方多图参考 · TTP 多图参考换装</div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>Klein_EditTOP</h3><span class="ver">图像编辑</span></div>
+        <div class="tags"><span class="tag">图像编辑</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
+        <div class="core"><b>核心功能：</b>Flux2-Klein 9B 最强图像编辑 · 换装/重绘/去水印/线稿上色</div>
+        <div class="feat"><span>WebUI 功能：</span>换装提取 · 局部重绘 · 去水印 · 线稿上色 · 产品精修 · 扩图 · 批量生成 · 脸部替换 · 多图编辑 · 线稿转效果图 · 角色分镜批量生成</div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>krea2</h3><span class="ver">3.0</span></div>
+        <div class="tags"><span class="tag">文生图</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
+        <div class="core"><b>核心功能：</b>Krea2 文生图 · 图生图 · 图像克隆 · 参考编辑 · 3D 导演台</div>
+        <div class="feat"><span>WebUI 功能（8 项）：</span>文生图 · 文生图加强版 · 图生图1-克隆 · 图生图2-参考 · 图生图3-编辑 · 图片编辑Beta · 图片编辑2测试版 · 人物动作姿势3D导演台</div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>Qwen_ImageEdit</h3><span class="ver">v4.0</span></div>
+        <div class="tags"><span class="tag">万物迁移</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
+        <div class="core"><b>核心功能：</b>Qwen-Edit 万物迁移 · 多角度 · 模特换装 · 姿势迁移</div>
+        <div class="feat"><span>WebUI 功能：</span>多角度生成 · 模特换装 · 脸部替换 · 姿势迁移 · NSFW 模式 · 扩图 · 角色多视图 · 多图编辑 · 单图编辑 · 50 系优化 · Nunchaku 量化加速</div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>Z-Image-White-AIO</h3><span class="ver">文生图</span></div>
+        <div class="tags"><span class="tag">文生图</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
+        <div class="core"><b>核心功能：</b>Z-Image 高质量文生图 · 反推洗稿 · 多视角 · 角色三视图</div>
+        <div class="feat"><span>WebUI 功能：</span>高质量文生图 · 图生图洗稿 · 反推提示词 · 多视角生成 · 角色三视图 · 多角度控制 · LORA 风格支持 · 4K 高清输出</div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>Z_image_turbo</h3><span class="ver">v3.2</span></div>
+        <div class="tags"><span class="tag">图像处理</span><span class="tag">8G 显存</span><span class="tag ram">16G 内存</span></div>
+        <div class="core"><b>核心功能：</b>Z-Image 快速版 + FlashVSR / SeedVR 超分</div>
+        <div class="feat"><span>WebUI 功能：</span>文生图 · 图生图 · 提示词管理 · FlashVSR 极速视频超分 · SeedVR2 高清放大 · 局部重绘 · 批量处理 · 图像编辑</div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>Bernini</h3><span class="ver">3D</span></div>
+        <div class="tags"><span class="tag">3D 生成</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
+        <div class="core"><b>核心功能：</b>AI 3D 模型生成 · 文生 3D + 图生 3D</div>
+        <div class="feat"><span>WebUI 功能：</span>文生3D · 图生3D · 导演控制模式 · 多风格3D生成 · 模型导出</div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>ACEStep_HearMuLa</h3><span class="ver">音乐生成</span></div>
+        <div class="tags"><span class="tag">音乐/音频</span><span class="tag">8G 显存</span><span class="tag ram">16G 内存</span></div>
+        <div class="core"><b>核心功能：</b>AI 音乐生成 · 音频处理 · 歌曲制作</div>
+        <div class="feat"><span>WebUI 功能：</span>AI 音乐生成 · 音频处理 · 歌曲制作 · 多风格音乐 · 音频编辑</div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>NSFW_workflows</h3><span class="ver">工作流套件</span></div>
+        <div class="tags"><span class="tag">工作流</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
+        <div class="core"><b>核心功能：</b>姿势管理 + 文生图工作流集合</div>
+        <div class="feat"><span>WebUI 功能：</span>姿态管理 · 文生图 · 图生图 · 局部重绘 · 批量处理 · 安全模式</div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>X-TTS</h3><span class="ver">v3.0</span></div>
+        <div class="tags"><span class="tag">配音</span><span class="tag">8G 显存</span><span class="tag ram">16G 内存</span></div>
+        <div class="core"><b>核心功能：</b>轻量级 TTS 配音工具</div>
+        <div class="feat"><span>WebUI 功能：</span>文字转语音 · 多音色选择 · 快速生成 · 语音预览 · TTS 配音 · 音调调节</div>
+      </article>
     </div>
   </div>
-</div>
 </section>
 
-<section class="section" id="how">
-<div class="container">
-  <h2 class="section-title">🖥️ 简直不能再简单</h2>
-  <p class="section-sub">小白也能轻松上手，双击即用，无需配置</p>
-  <div class="steps">
-    <div class="step"><div class="step-num">1</div><h4>双击启动</h4><p>解压后双击启动器，自动加载环境</p></div>
-    <div class="step"><div class="step-num">2</div><h4>弹出 WebUI</h4><p>自动打开浏览器进入图形操作界面</p></div>
-    <div class="step"><div class="step-num">3</div><h4>选择模板</h4><p>内置多种工作流模板，点选即用</p></div>
-    <div class="step"><div class="step-num">4</div><h4>一键生成</h4><p>调整参数 → 点击生成 → 出结果</p></div>
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head"><h2>购买流程</h2><p>添加微信，确认产品，付款后立即发货。</p></div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h4>添加微信</h4><p>搜索 ZFY-AI160，备注要购买的产品名称</p></div>
+      <div class="step"><div class="n">2</div><h4>确认产品</h4><p>确认版本、显卡配置和价格</p></div>
+      <div class="step"><div class="n">3</div><h4>微信付款</h4><p>确认收款后开始发货</p></div>
+      <div class="step"><div class="n">4</div><h4>接收资料</h4><p>网盘链接 + 解压密码 + 激活码</p></div>
+      <div class="step"><div class="n">5</div><h4>解压激活</h4><p>启动器输入激活码，绑定电脑即可使用</p></div>
+    </div>
   </div>
-  <div class="adv-grid">
-    <div class="adv-item"><div class="adv-icon">⚡</div><h4>SageAttention</h4><p>全局注意力加速 3x<br>TF32 全开</p></div>
-    <div class="adv-item"><div class="adv-icon">📦</div><h4>解压即用</h4><p>独立环境 + 模型<br>绿色不污染系统</p></div>
-    <div class="adv-item"><div class="adv-icon">🔐</div><h4>云端授权</h4><p>Cloudflare 验证<br>撤销即时生效</p></div>
-    <div class="adv-item"><div class="adv-icon">🔄</div><h4>持续更新</h4><p>工作流/模型迭代<br>老客户优惠升级</p></div>
-    <div class="adv-item"><div class="adv-icon">🎯</div><h4>全场景覆盖</h4><p>图·视频·语音·3D<br>一个平台全搞定</p></div>
-    <div class="adv-item"><div class="adv-icon">💪</div><h4>50系优化</h4><p>NVIDIA 50 系优化<br>Nunchaku 量化</p></div>
-  </div>
-</div>
 </section>
 
-<section class="section" id="contact">
-<div class="container">
-  <div class="contact-box">
-    <h3>📱 联系购买</h3>
-    <p>每套均为独立整合包，含环境 + 模型 + 工作流，即开即用</p>
-    <div class="wx-info"><span>ZFY-AI160</span></div>
-    <p style="color:#64748B;font-size:13px;margin-bottom:20px">添加微信请备注「购买产品名称」· 批量采购 / 代理合作 欢迎咨询</p>
-    <a href="#contact" class="btn btn-wx">💬 微信: ZFY-AI160</a>
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head"><h2>服务与售后</h2><p>每套都是独立环境，绿色不污染系统。</p></div>
+    <div class="service">
+      <div class="svc"><div class="ic">⚡</div><h4>Sage 加速</h4><p>SageAttention 全局注意力加速 3x，TF32 全开</p></div>
+      <div class="svc"><div class="ic">📦</div><h4>解压即用</h4><p>独立环境 + 模型，无需复杂配置</p></div>
+      <div class="svc"><div class="ic">🔐</div><h4>云端授权</h4><p>Cloudflare 验证，撤销即时生效</p></div>
+      <div class="svc"><div class="ic">🔄</div><h4>持续更新</h4><p>工作流与模型迭代，老客户优惠升级</p></div>
+      <div class="svc"><div class="ic">💬</div><h4>使用指导</h4><p>安装与激活问题提供售后指导</p></div>
+      <div class="svc"><div class="ic">🤝</div><h4>代理合作</h4><p>批量采购与代理合作欢迎咨询</p></div>
+    </div>
   </div>
-</div>
 </section>
 
-<footer>
-<div class="container">
-  <p>© 2026 ZFY-AI | 微信: ZFY-AI160 | 邮箱: zfy-ai@qq.com</p>
-  <p style="margin-top:6px;color:#475569">基于 ComfyUI · 自研整合 · 品质保证</p>
-</div>
+<footer class="footer">
+  <div class="wrap contact">
+    <p>咨询购买 · 批量采购 · 代理合作</p>
+    <div class="big">微信：ZFY-AI160</div>
+    <p class="hint">添加微信请备注「购买产品名称」</p>
+  </div>
 </footer>
-
 </body>
 </html>
-
