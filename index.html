@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZFY 至尊AI工具包</title>
+<meta name="description" content="视界星创 AI 全能创作：本地 GPU 驱动的全自动短剧创作工作台，从创作设定到成片交付，一条航线完成。">
+<meta property="og:title" content="视界星创 AI 全能创作 · 本地短剧创作工作台">
+<meta property="og:description" content="从一句话到一部完整短剧，连接本地 GPU、ComfyUI、人物、场景、镜头和成片交付。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zfyai.cn/">
+<link rel="icon" href="favicon.ico">
+<title>视界星创 AI 全能创作 · 本地短剧创作工作台</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#070c14;--panel:#0d1520;--panel2:#101b2b;--line:#1d2c40;--green:#18d464;--cyan:#72ffd7;--orange:#ffb454;--text:#e8f0f8;--muted:#93a7bd}
@@ -69,34 +75,88 @@ a{color:inherit;text-decoration:none}
   .topbar .wechat-pill{font-size:13px;padding:7px 10px}
   .brand .name{display:none}
 }
+
+.wf-details{margin:8px 0 4px;padding:14px 16px;border:1px solid #1e5c3a;border-radius:8px;background:rgba(12,43,29,.35)}
+.wf-details summary{cursor:pointer;font-weight:700;color:var(--cyan);font-size:14px}
+.wf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:12px}
+.wf-group h4{color:var(--orange);font-size:13px;margin-bottom:6px}
+.wf-group ul{list-style:none;padding:0;margin:0}
+.wf-group li{font-size:12px;color:#bcd2e6;padding:3px 0;border-bottom:1px dashed rgba(255,255,255,.06)}
+
+/* 视界星创首页主视觉与产品矩阵重构 */
+:root{--bg:#070b1c;--panel:#0e1630;--panel2:#131d3d;--line:rgba(115,142,235,.26);--green:#5de4d0;--cyan:#8db4ff;--orange:#efc86e;--violet:#9e7bff;--text:#eef1ff;--muted:#9aa9d1}
+body{background:radial-gradient(circle at 50% -20%,rgba(92,89,207,.22),transparent 42%),#070b1c}
+.topbar{background:rgba(7,11,28,.9);border-bottom-color:rgba(132,151,238,.2)}
+.brand .dot{background:linear-gradient(135deg,#6a65ff,#56d9de);color:#fff;box-shadow:0 0 22px rgba(102,115,255,.42)}
+.wechat-pill{background:linear-gradient(135deg,#6e63ff,#448fdb);color:#fff;border:1px solid rgba(169,182,255,.48);box-shadow:0 8px 24px rgba(66,76,191,.25)}
+.hero{min-height:620px}.hero::after{background:linear-gradient(90deg,rgba(7,11,28,.94) 0%,rgba(7,11,28,.74) 48%,rgba(7,11,28,.9) 100%)}
+.hero h1 em{background:linear-gradient(90deg,#f0cf7a,#9ea9ff 70%,#65dfe0)}
+.btn{border-radius:12px}.btn-green{background:linear-gradient(135deg,#f1d27e,#c9a64d);color:#171426;box-shadow:0 9px 25px rgba(213,171,77,.2)}.btn-ghost{border-color:rgba(140,161,255,.4);background:rgba(36,48,94,.45)}
+.stat{border-radius:14px;background:rgba(18,27,59,.75);border-color:rgba(135,157,255,.22)}.stat b{color:#f0d17d}
+.section{position:relative}.section-head h2,.vision-feature-head h2{color:#f1f2ff}.card,.step,.svc{border-radius:16px;background:linear-gradient(145deg,rgba(20,30,64,.94),rgba(11,17,39,.94));border-color:rgba(113,139,230,.22);box-shadow:0 15px 45px rgba(0,0,0,.14)}.card.flagship{background:linear-gradient(135deg,rgba(40,32,67,.96),rgba(17,33,62,.96));border-color:rgba(222,185,94,.42)}.tag{border-radius:999px;background:rgba(108,132,255,.1);color:#b5c4ff;border-color:rgba(128,151,255,.28)}.tag.ram{background:rgba(239,200,110,.1);color:#f0cf7e;border-color:rgba(239,200,110,.3)}
+.wf-details{border-color:rgba(126,149,245,.25);background:rgba(19,30,63,.55);border-radius:14px}.wf-group h4{color:#e9c66f}
+.vision-feature{padding-top:60px;padding-bottom:74px;background:linear-gradient(180deg,rgba(15,20,48,.4),rgba(7,11,28,0))}.vision-feature-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}.vision-feature-head h2{font-size:clamp(28px,4vw,44px);margin:10px 0 8px}.vision-feature-head p{color:var(--muted);max-width:650px}.section-kicker{color:#e9c66f;font-size:11px;letter-spacing:.18em}.btn-gold{background:rgba(232,199,123,.1);border:1px solid rgba(232,199,123,.48);color:#f2d78c;white-space:nowrap}.vision-feature-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(300px,.9fr);gap:24px;align-items:stretch}.vision-gallery{min-width:0}.shot-main{position:relative;width:100%;padding:0;border:1px solid rgba(112,143,244,.4);border-radius:18px;overflow:hidden;background:#0b1128;display:block;cursor:zoom-in;box-shadow:0 20px 55px rgba(0,0,0,.34)}.shot-main img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center}.shot-overlay{position:absolute;right:14px;bottom:14px;padding:7px 11px;border-radius:999px;background:rgba(6,9,24,.74);border:1px solid rgba(169,186,255,.35);font-size:12px;color:#dae1ff;opacity:0;transform:translateY(5px);transition:.2s}.shot-main:hover .shot-overlay{opacity:1;transform:translateY(0)}.shot-thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:9px;margin-top:11px}.shot-thumb{padding:0;border:1px solid rgba(113,139,230,.24);border-radius:10px;overflow:hidden;background:#0c1430;color:#aab7df;cursor:pointer;text-align:left}.shot-thumb img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;opacity:.7;transition:.2s}.shot-thumb span{display:block;padding:6px 7px;font-size:11px;white-space:nowrap}.shot-thumb:hover img,.shot-thumb.active img{opacity:1}.shot-thumb.active{border-color:#e4c16b;box-shadow:0 0 0 1px rgba(228,193,107,.18)}.vision-points{display:flex;flex-direction:column;justify-content:center;gap:12px}.vision-point{display:flex;gap:13px;padding:16px;border:1px solid rgba(113,139,230,.2);background:rgba(14,23,52,.7);border-radius:14px}.vision-point i{font-style:normal;color:#e9c66f;font-size:12px;letter-spacing:.08em;padding-top:3px}.vision-point h3{font-size:16px;margin-bottom:3px}.vision-point p{font-size:13px;color:var(--muted);line-height:1.6}.vision-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}.vision-tags span{font-size:11px;color:#b9c7f3;background:rgba(111,129,232,.1);border:1px solid rgba(113,139,230,.25);border-radius:999px;padding:5px 9px}.legacy-heading{grid-column:1/-1;display:flex;align-items:baseline;gap:12px;padding:22px 3px 2px;border-top:1px solid rgba(113,139,230,.17);margin-top:10px}.legacy-heading span{font-size:10px;letter-spacing:.18em;color:#e9c66f}.legacy-heading strong{font-size:24px}.legacy-heading small{color:var(--muted)}.shot-lightbox{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:30px;background:rgba(2,4,14,.88);backdrop-filter:blur(12px);opacity:0;pointer-events:none;transition:.2s}.shot-lightbox.open{opacity:1;pointer-events:auto}.shot-lightbox img{max-width:min(1400px,94vw);max-height:88vh;border:1px solid rgba(180,194,255,.4);border-radius:14px;box-shadow:0 30px 90px rgba(0,0,0,.55)}.shot-close{position:absolute;right:28px;top:20px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(187,201,255,.4);background:rgba(20,28,65,.8);color:#fff;font-size:27px;cursor:pointer}
+.footer{background:#050817;border-top-color:rgba(113,139,230,.2)}.footer .big{background:linear-gradient(90deg,#f0d27d,#a9b6ff);-webkit-background-clip:text;background-clip:text}
+@media(max-width:900px){.vision-feature-grid{grid-template-columns:1fr}.vision-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.vision-tags{grid-column:1/-1}}@media(max-width:760px){.vision-feature-head{align-items:flex-start;flex-direction:column}.shot-thumbs{grid-template-columns:repeat(3,1fr)}.vision-points{grid-template-columns:1fr}.legacy-heading{align-items:flex-start;flex-direction:column;gap:4px}}
+
 </style>
 </head>
 <body>
 <header class="topbar">
   <div class="wrap">
-    <div class="brand"><span class="dot">Z</span><span class="name">ZFY 至尊AI工具包</span></div>
-    <a class="wechat-pill" href="weixin://">联系交流 · ZFY-AI160</a>
+    <div class="brand"><span class="dot">✦</span><span class="name">视界星创 AI 全能创作 · 产品中心</span></div>
+    <a class="wechat-pill" href="#visionstar">查看主推产品 <span>↘</span></a>
   </div>
 </header>
 
 <section class="hero">
-  <img src="hero.jpg" alt="ZFY AI 工具包">
+  <img src="assets/visionstar/workbench-progress.webp" alt="视界星创 AI 全能创作工作台">
   <div class="wrap content">
-    <p>一站式 ComfyUI 整合方案</p>
-    <h1>文生图 · 视频生成<br><em>语音克隆 · 动作迁移</em></h1>
-    <p>13 套独立整合包，解压即用，每套都带独立 Python 环境、预装节点、精选工作流和云端授权验证。</p>
+    <p>本地 AI 短剧创作工作台 · LOCAL CREATIVE OS</p>
+    <h1>视界星创 AI 全能创作<br><em>从一句话，到一部完整短剧</em></h1>
+    <p>从创作设定、故事蓝图到人物、场景、镜头成片和成片交付，沿着一条清晰的创作航线自动推进。支持本地 GPU、ComfyUI、横屏 / 竖屏和十多种视觉画风。</p>
     <div class="cta">
-      <a class="btn btn-green" href="#products">查看全部产品</a>
-      <a class="btn btn-ghost" href="weixin://">联系 ZFY-AI160</a>
+      <a class="btn btn-green" href="#visionstar">查看视界星创</a>
+      <a class="btn btn-ghost" href="#products">浏览产品矩阵</a>
     </div>
     <div class="stats">
-      <div class="stat"><b>13</b><span>整合包数量</span></div>
-      <div class="stat"><b>150+</b><span>预装节点</span></div>
-      <div class="stat"><b>100+</b><span>精选工作流</span></div>
-      <div class="stat"><b>3x</b><span>Sage 加速</span></div>
+      <div class="stat"><b>08</b><span>创作阶段</span></div>
+      <div class="stat"><b>十多种</b><span>视觉画风</span></div>
+      <div class="stat"><b>2</b><span>短剧画幅模式</span></div>
+      <div class="stat"><b>LOCAL</b><span>本地 GPU 引擎</span></div>
     </div>
   </div>
 </section>
+
+<section class="vision-feature section" id="visionstar">
+  <div class="wrap">
+    <div class="vision-feature-head">
+      <div><span class="section-kicker">FEATURED PRODUCT / 01</span><h2>视界星创 AI 全能创作</h2><p>一条创作航线，把故事设定、人物资产、场景资产、镜头生成和成片交付连成一个完整工作台。</p></div>
+      <a class="btn btn-gold" href="视界星创AI全能创作-使用说明.html">查看使用说明 ↗</a>
+    </div>
+    <div class="vision-feature-grid">
+      <div class="vision-gallery">
+        <button class="shot-main" type="button" data-shot="0" aria-label="查看视界星创工作台截图"><img src="assets/visionstar/home.webp" alt="视界星创主页截图" loading="eager"><span class="shot-overlay">点击放大预览 <b>↗</b></span></button>
+        <div class="shot-thumbs" role="tablist" aria-label="视界星创界面截图">
+          <button class="shot-thumb active" type="button" data-shot="0"><img src="assets/visionstar/home.webp" alt="主页"><span>主页</span></button>
+          <button class="shot-thumb" type="button" data-shot="1"><img src="assets/visionstar/workbench-empty.webp" alt="工作台"><span>工作台</span></button>
+          <button class="shot-thumb" type="button" data-shot="2"><img src="assets/visionstar/workbench-progress.webp" alt="生成中"><span>生成中</span></button>
+          <button class="shot-thumb" type="button" data-shot="3"><img src="assets/visionstar/canvas-assets.webp" alt="无限画布"><span>无限画布</span></button>
+          <button class="shot-thumb" type="button" data-shot="4"><img src="assets/visionstar/canvas-empty.webp" alt="画布节点"><span>画布节点</span></button>
+          <button class="shot-thumb" type="button" data-shot="5"><img src="assets/visionstar/engine-center.webp" alt="引擎中心"><span>引擎中心</span></button>
+        </div>
+      </div>
+      <div class="vision-points">
+        <div class="vision-point"><i>01</i><div><h3>全自动短剧流程</h3><p>从创作设定到成片交付，八个阶段逐步推进，状态、资产和结果集中管理。</p></div></div>
+        <div class="vision-point"><i>02</i><div><h3>人物与场景保持统一</h3><p>角色三视图、场景图和分镜视频在同一个项目中衔接，减少反复整理素材。</p></div></div>
+        <div class="vision-point"><i>03</i><div><h3>本地 GPU 优先</h3><p>连接本地 ComfyUI 引擎，显存、内存、队列和执行状态在工作台内可视化查看。</p></div></div>
+        <div class="vision-point"><i>04</i><div><h3>十多种视觉表达</h3><p>覆盖写实、电影、动漫、3D、手绘、国风和未来感等创作方向。</p></div></div>
+        <div class="vision-tags"><span>横屏短剧</span><span>竖屏短剧</span><span>无限画布</span><span>本地运行</span><span>ComfyUI</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="shot-lightbox" aria-hidden="true"><button class="shot-close" type="button" aria-label="关闭预览">×</button><img src="" alt="截图预览"></div>
 
 <section class="section" id="products">
   <div class="wrap">
@@ -106,77 +166,358 @@ a{color:inherit;text-decoration:none}
     </div>
     <div class="grid">
       <article class="card flagship">
-        <div class="card-top"><h3>ZFY-至尊版 全功能整合包</h3><span class="ver">旗舰版</span></div>
+        <div class="card-top"><h3>🚀 ZFY-至尊版 全功能整合包</h3><span class="ver">旗舰版</span></div>
         <div class="tags"><span class="tag">12G+ 显存</span><span class="tag ram">32G+ 内存</span><span class="tag">SageAttention 3x</span><span class="tag">云端授权</span></div>
-        <div class="core"><b>核心能力：</b>LTX2.3 / Wan2.2 文生视频 · FLUX / Z-Image / Krea2 文生图 · Qwen3-TTS / IndexTTS2 语音克隆 · SCAIL2 / WanAnimate 动作迁移 · Qwen-Edit 万物迁移 · InfiniteTalk 数字人 · FUSIONX 创意特效</div>
-        <div class="feat"><span>优势：</span>100+ 精选工作流 · 150+ 自定义节点 · TF32 全开 · 50 系显卡优化 · 一键启动 · 硬件监控 · 运行日志 · 模型管理 · 一键更新 · 环境诊断 · 云端授权撤销即时生效</div>
+        <div class="core"><b>核心能力：</b>本地一站式 AI 创作平台 · 视频生成 · 图像生成 · 语音克隆 · 数字人 · 高清修复 · 电商与脸部工作流</div>
+        <div class="feat"><span>能力详解（19 类 · 200+ 精选工作流）：</span>LTX2.3 视频 / Wan2.2 视频与动画 / FUSIONX 视频特效 / FLUX 文生图 / Z-Image 文生图 / Krea2 文生图 / Flux2-Klein 图像编辑 / Qwen-Edit 万物迁移 / Kontext 一句话改图 / 高清修复（FlashVSR / SeedVR2）/ 50 系显卡专用 / 动作迁移 / 数字人合集（InfiniteTalk）/ 音频与语音克隆（Qwen3-TTS / IndexTTS2 / HeartMuLa 音乐）/ 电商换装 / 脸部替换与换头 / 完美修手 / GP-4o 创意生成 / 漫剧与批量生成</div>
+        <div class="feat"><span>平台优势：</span>150+ 预装节点 · TF32 全开 · 50 系显卡优化 · 一键启动 · 硬件监控 · 运行日志 · 模型管理 · 一键更新 · 环境诊断 · 云端授权撤销即时生效</div>
       </article>
+<details class="wf-details">
+<summary>至尊版全量精选工作流 · 共 238 个（点击展开）</summary>
+<div class="wf-grid">
+<div class="wf-group"><h4>01-LTX2.3工作流（28）</h4><ul>
+<li>16G低显存版-创新LTX2.3-9宫格AI漫剧生成</li>
+<li>AI漫剧 9宫格分镜图自动分割</li>
+<li>LTX-2.3 批量化漫剧 20宫格 直出1分钟视频</li>
+<li>LTX-2.3-PromptRelay四图AI短剧制作 </li>
+<li>LTX2.3 AI漫剧生成系统 V3.0</li>
+<li>LTX2.3 去除字幕水印极速流，效果不错！</li>
+<li>LTX2.3 双人对话！图生视频音画同步 KJ优化版</li>
+<li>LTX2.3 视频模糊变清晰极速流，效果不错！</li>
+<li>LTX2.3图生视频-特效之斗鸡眼</li>
+<li>Ltx2.3多镜头时间+逻辑控制PromptRelay+VBVR（KJ版）</li>
+<li>Ltx2.3多镜头时间+逻辑控制（KJ版）</li>
+<li>MSR_用户版</li>
+<li>Qwen3.5图片反推&amp;分镜剧本设计</li>
+<li>人物设定三视图</li>
+<li>全自动LTX-2.3_MSR 多图参考高动态图生视频工作流</li>
+<li>全自动六宫格LTX2.3导演台</li>
+<li>半自动六宫格LTX2.3导演台</li>
+<li>单人 LTX2.3数字人带配音，无字幕！</li>
+<li>单人 LTX2.3数字人，无字幕！</li>
+<li>双人对话LTX2.3图生音视频、双人数字人，自定义人物、自定义音色、唇形同步，无字幕！</li>
+<li>最新LTX 2.3  文生视频工作流</li>
+<li>最新LTX 2.3 图生视频工作流 </li>
+<li>最新LTX 2.3 首尾帧图生视频KJ版工作流 </li>
+<li>最新LTX2.3+1.1模型+三图-首中尾帧+极速版</li>
+<li>最新LTX2.3-官方版首尾帧图生视频</li>
+<li>直追SeeDance2.0：LTX-2.3_MSR 多图参考高动态图生视频工作流</li>
+<li>🦞LTX-2.3 四宫格AI短剧生成有点意思版</li>
+<li>🦞新LTX-2.3 20宫格漫剧 一次直出60秒视频（V3.0优化版）</li>
+</ul></div>
+<div class="wf-group"><h4>02-图片工作流（22）</h4><ul>
+<li>1、FLUX-标准文生图</li>
+<li>2、FLUX-标准图生图反推工作流</li>
+<li>3、图片反推提示词</li>
+<li>4、高清放大工作流</li>
+<li>5、完美证件照V3.0</li>
+<li>7、XL文生图＋高清放大</li>
+<li>A2、FLUX-FILL高清扩图工作流</li>
+<li>A3、FLUX-哪吒2-魔童闹海一键生成</li>
+<li>A4、FLUX-文生图生成毛绒玩具</li>
+<li>A6、Emoji极简快速表情包生成器</li>
+<li>B2、智能批量抠图工作流V2.3</li>
+<li>B3、智能批量图生图反推洗稿工作流V2.3</li>
+<li>B4、FLUX-IP三视图角色生成工作流</li>
+<li>FLUX-多提示词文生图</li>
+<li>FLUX-标准文生图（灵魂出窍）</li>
+<li>FLUX2-6grid-一键六宫格</li>
+<li>FLUX超级毛坯房精装修</li>
+<li>SeedVR2批量图像高清放大流</li>
+<li>Z-IMAGE智能批量图生图反推洗稿工作流V</li>
+<li>一键六宫格FLUX2-6grid</li>
+<li>人物设定三视图</li>
+<li>抖音屠流爆款网红美女工作流</li>
+</ul></div>
+<div class="wf-group"><h4>03-Z-image（11）</h4><ul>
+<li>SeeDance 2.0 AI短剧漫剧专用超逼真人物设定集 Z-IMAGE文生图</li>
+<li>Z-IMAGE 文生图+梦幻动漫风格LORA</li>
+<li>Z-IMAGE-极速图生图洗稿</li>
+<li>Z-IMAGE文生图1次5张</li>
+<li>Z-IMAGE：4K文生图+LORA</li>
+<li>Z-IMAGE：4K文生图+性感黑丝LORA</li>
+<li>Z-IMAGE：4K文生图+生化危机艾达王LORA</li>
+<li>Z-image+Controlnet姿态控制</li>
+<li>多视角人物场景都可</li>
+<li>新王登基，吊打FLUX2（Z-IMAGE反推图生图）</li>
+<li>新王登基，吊打FLUX2（Z-IMAGE文生图）</li>
+</ul></div>
+<div class="wf-group"><h4>04-高清修复（5）</h4><ul>
+<li>FlashVSR+视频超分辨率修复+极速低显存版</li>
+<li>SeedVR2-视频高清放大（速度很慢）</li>
+<li>SeedVR2图像高清放大流</li>
+<li>最新英伟达Nvidia超极速图片高清放大流--默认4倍放大</li>
+<li>最新英伟达Nvidia超极速视频高清放大流</li>
+</ul></div>
+<div class="wf-group"><h4>05-50系专用（15）</h4><ul>
+<li>50系专用高逼格，人物三宫格艺术写真</li>
+<li>AI转场造梦机V3.0</li>
+<li>KONTEXT高级溶图马上有钱版</li>
+<li>一键多角度智能运镜长视频生成</li>
+<li>一键美女6连拍写真视频</li>
+<li>与儿时的自己跨时空合影PLUS版--50系显卡专用</li>
+<li>为视频加字幕展示</li>
+<li>人物场景迁移保持和参考姿势一致性V3</li>
+<li>创意大作｜日历生成器</li>
+<li>最新真人视频转动漫Ditto</li>
+<li>混元3D-V2.1--图生3D模型</li>
+<li>美女6连拍写真套图</li>
+<li>美女写真套图视频流</li>
+<li>🤖50系显卡专用Nunchaku-QWEN-IP角色多视图</li>
+<li>🤖NEW炼丹图片打标工作流</li>
+</ul></div>
+<div class="wf-group"><h4>06-动作迁移（14）</h4><ul>
+<li>LTX2.3 双人对话！图生视频音画同步 KJ优化版！</li>
+<li>SCAIL 2多图参考 高一致性 人物替换</li>
+<li>SCAIL 2多图参考 高一致性 动作迁移</li>
+<li>SCAIL 2高级人物替换&amp;动作迁移长视频生成--（一键长视频 + 多图参考 + 动作迁移 + 背景替换）</li>
+<li>Scail2人物替换-低显存长视频生成</li>
+<li>Scail2动作迁移-低显存长视频生成</li>
+<li>Wan2.2 Animate动作迁移不复刻表情长视频生成加速版</li>
+<li>Wan2.2 Animate动作迁移表情模拟长视频版（模拟表情）</li>
+<li>Wan2.2高清动作迁移V3</li>
+<li>WanAnimate V2动作迁移官方版-无限时长</li>
+<li>WanAnimate_去AI感新版动作迁移</li>
+<li>全新图片跳舞！Wan2.2-Animate V2超极速版</li>
+<li>🦞🦞SCAIL2动作迁移+人物替换（单人）-循环长视频 </li>
+<li>🦞🦞SCAIL2动作迁移+人物替换（多人）-循环长视频 </li>
+</ul></div>
+<div class="wf-group"><h4>07-Qwen（32）</h4><ul>
+<li>50系-Qwen-edit文生模特换装</li>
+<li>50系-Qwen-edit文生模特换装+脸部替换</li>
+<li>50系Nunchaku-Qwen-Image极速版文生图</li>
+<li>50系Qwen-Edit 2509：姿势迁移终极动作完美复刻</li>
+<li>50系Qwen万物迁移溶图优化版</li>
+<li>50系专用-Qwen-image角色IP多视图极速版（男女二合一，默认女）</li>
+<li>50系显卡专用一张图片生成多角度12视图</li>
+<li>50系显卡专用人物三视图-三视图一键生成</li>
+<li>Qwen Next Scene 影视剧情分镜制作</li>
+<li>Qwen-6grid-分镜</li>
+<li>Qwen-Image2512文生图</li>
+<li>Qwen-image-edit2509基础工作流</li>
+<li>Qwen-image2509一键改变人物角度</li>
+<li>Qwen-image2512+lora基础工作流</li>
+<li>Qwen-image2512-纸雕手工艺术-</li>
+<li>Qwen-image最强海报洗图工作流V6</li>
+<li>Qwen3.5-图片和视频反推</li>
+<li>Qwen_image_edit_2511一键多角度</li>
+<li>qwen-edit-2511-多视角控制生成-人物角色设计</li>
+<li>qwen_image_edit_2511单图编辑</li>
+<li>qwen_image_edit_2511多图编辑</li>
+<li>一键生成证件照-Nunchaku加速（50系显卡专用）</li>
+<li>三视图-三视图一键生成-Qwen-Edit-2511</li>
+<li>人物设定三视图（50系显卡专用）</li>
+<li>免费API版：QWEN 3VL视频反推生视频</li>
+<li>六分镜Qwen-6分镜</li>
+<li>千问Edit Plus模特换装，50系显卡专用工作流</li>
+<li>千问Edit2509多图编辑-Nunchaku加速（50系显卡专用）</li>
+<li>千问Qwen一键表情包制作-Nunchaku加速（50系显卡专用）</li>
+<li>新Qwen-Image2512极速版文生图</li>
+<li>视频反推提示词</li>
+<li>魔搭-图片反推（可增加提示词）</li>
+</ul></div>
+<div class="wf-group"><h4>08-数字人合集（10）</h4><ul>
+<li>InfiniteTalk-官版数字人MV_多图自动连帧直出 </li>
+<li>infinitetalk单人数字人-带配音</li>
+<li>新InfiniteTalk-Comfyui官方流长视频生成</li>
+<li>最新InfiniteTalk 视频数字人V2V对口型 </li>
+<li>最新infinitetalk单人图片数字人KJ版</li>
+<li>最新infinitetalk双人图片数字人KJ版</li>
+<li>（官方版-循环）Infinite Talk无限时长单人数字人（视频提取音频）</li>
+<li>（官方版-循环）Infinite Talk无限时长极速版单人数字人</li>
+<li>🦞LTX-2.3 无限时长MV数字人对口型 商用级数字人原创，严禁搬运倒卖！</li>
+<li>🦞LTX-2.3 无限时长带货数字人对口型 商用级数字人原创，严禁搬运倒卖！</li>
+</ul></div>
+<div class="wf-group"><h4>09-音频工作流（7）</h4><ul>
+<li>HeartMuLa最新最强开源音乐生成</li>
+<li>INDEX TTS2单人声音克隆</li>
+<li>Qwen3 TTS 多人对话全自动有声小说制造机</li>
+<li>千问3TTS多功能语音设计语音克隆 </li>
+<li>双人INDEX TTS2最强开源多情感声音克隆</li>
+<li>把视频中的语音转成文字</li>
+<li>视频语音转文字</li>
+</ul></div>
+<div class="wf-group"><h4>10-电商换装（7）</h4><ul>
+<li>FLUX-FILL高清扩图工作流</li>
+<li>RMBG2.0完美抠图</li>
+<li>一键给人物换背景</li>
+<li>超级FLUX全自动换装工作流</li>
+<li>🤖一键抠图</li>
+<li>🤖一键给人物换背景</li>
+<li>🤖电商专用，完美万物迁移</li>
+</ul></div>
+<div class="wf-group"><h4>11-脸部工作流（5）</h4><ul>
+<li>WY新奇换头工作流，效果不错！</li>
+<li>创新视频换头( Animate Wan2.2)</li>
+<li>文生图指定人脸</li>
+<li>最新Flux2-Klein 9B-脸部替换</li>
+<li>🤖超高速高清InstantID脸部替换</li>
+</ul></div>
+<div class="wf-group"><h4>12-完美修手（2）</h4><ul>
+<li>50系显卡专用Qwen千问-完美修手</li>
+<li>WAN快速修手工作流</li>
+</ul></div>
+<div class="wf-group"><h4>13-Flux2-Klein（12）</h4><ul>
+<li>FLUX 2 klein-9B 图像编辑（多图）</li>
+<li>FLUX2 klein-9B 大模型反推图生图</li>
+<li>FLUX2 klein-9B 文生图</li>
+<li>FLUX2-Klein--批量生成动漫、短剧、角色分镜</li>
+<li>Flux2+Klein 产品精修</li>
+<li>Flux2+Klein 局部重绘</li>
+<li>Flux2+Klein 超级去水印</li>
+<li>Flux2+Klein+图像编辑（单图）</li>
+<li>Flux2-klein 完美扩图</li>
+<li>图片万物消除-祛水印-字幕-Logo等</li>
+<li>线稿上色+超分--FLUX2 KLEIN</li>
+<li>线稿转效果图--FLUX2 KLEIN</li>
+</ul></div>
+<div class="wf-group"><h4>14-Kontext（15）</h4><ul>
+<li>Flux Kontext--模糊照片变清晰</li>
+<li>Flux Kontext一句话真人转3D CHIBI风格</li>
+<li>Flux Kontext一句话转换18种风格</li>
+<li>Flux Kontext多模态一句话改图</li>
+<li>Flux Kontext超强去水印</li>
+<li>IP三视图-Kontext 精准控制工作流</li>
+<li>KONTEXT-全网效果最好的万物转卡通3D手办-超级还原</li>
+<li>KONTEXT一键美颜磨皮人像精修</li>
+<li>Kontext Presets转绘13种风格（自动提示词模式）</li>
+<li>Kontext最新姿势参考改图</li>
+<li>✌️Kontext 一句话改变人物角度</li>
+<li>最新超级KONTEXT老照片高清修复上色V2</li>
+<li>真人转手办-NANO BANANA平替</li>
+<li>超级KONTEXT产品一键精修</li>
+<li>超级KONTEXT图片高清修复+放大</li>
+</ul></div>
+<div class="wf-group"><h4>15-Krea2（4）</h4><ul>
+<li>Krea2-文生图-智能扩写+风格参考</li>
+<li>Krea2与Z-image生图效果对比</li>
+<li>最新Krea2图生图洗稿工作流</li>
+<li>最新Krea2清纯美学工作流</li>
+</ul></div>
+<div class="wf-group"><h4>16-视频工作流Wan2.2（19）</h4><ul>
+<li>111视频人物替换-超强版本</li>
+<li>Stand-In+Wan2.2超级人物一致性文生视频</li>
+<li>WAN2.2超级图生图洗稿专用保过原创</li>
+<li>Wan2.2 精准调度文生视频加速版</li>
+<li>Wan2.2-Svi 2.0无限图生视频-20秒</li>
+<li>Wan2.2-for循环批量生成视频系统V8</li>
+<li>Wan2.2创意文生视频，可媲美VEO3-开箱广告视频</li>
+<li>Wan2.2去AI感文生图（自动扩写提示词）</li>
+<li>Wan2.2新奇玩法之主人与分身的互动</li>
+<li>Wan2.2精准调度图生视频加速版</li>
+<li>Wan2.2超级首尾帧KJ版</li>
+<li>✌️Stand-In+Wan2.2超级人物一致性大模型反推图生视频</li>
+<li>最新wan2.2-14B图生视频官方极速版，效果炸裂</li>
+<li>最新wan2.2-14B文生视频官方极速版，效果炸裂</li>
+<li>最新万相wan2.2-14B首尾帧，图生视频极速版</li>
+<li>最新万相wan2.2-人物一致性，效果炸裂</li>
+<li>长视频直出！Wan2.2超级魔改图生视频</li>
+<li>🤖WAN2.1-VACE一键视频扩展</li>
+<li>🤖核炸！Wan超级视频人物替换+动作迁移</li>
+</ul></div>
+<div class="wf-group"><h4>17-视频特效（13）</h4><ul>
+<li>FUSIONX-GGUF超级加速图生视频猴子摘假发</li>
+<li>FUSIONX-GGUF超级加速图生视频：360度旋转特效，最低12G显卡和32G内存可玩</li>
+<li>FUSIONX-GGUF超级加速图生视频：化身金刚芭芘秀肌肉</li>
+<li>FUSIONX-GGUF超级加速图生视频：吻屏</li>
+<li>FUSIONX-GGUF超级加速图生视频：喷火特效</li>
+<li>FUSIONX-GGUF超级加速图生视频：开枪射击特效</li>
+<li>FUSIONX-GGUF超级加速图生视频：换发型</li>
+<li>FUSIONX-GGUF超级加速图生视频：法天相地特效</li>
+<li>FUSIONX-GGUF超级加速图生视频：泼水换装</li>
+<li>FUSIONX-GGUF超级图生视频：ASMR切水晶解压放松</li>
+<li>FUSIONX-GGUF超级图生视频：万物可捏扁解压放松</li>
+<li>FUSIONX-GGUF超级图生视频：核弹爆炸</li>
+<li>豆包去水印--直接上传视频，自动识别横竖比例</li>
+</ul></div>
+<div class="wf-group"><h4>18-Wan动画（12）</h4><ul>
+<li>1111Wan Animate KJ V2版+Sec稳定自动遮罩视频换装</li>
+<li>Wan2.2 Animate人物替换+数字人加速版（无限时长）</li>
+<li>Wan2.2 Animate人物替换加速版（无限时长）</li>
+<li>Wan2.2 Animate动作迁移+完美口型数字人长视频生成加速版</li>
+<li>Wan2.2 Animate指定人物替换加速版（无限时长）</li>
+<li>Wan2.2 Animate指定人物替换（影视二创神器）</li>
+<li>WanAnimate -视频换人换背景</li>
+<li>WanAnimate-人物替换自动对口型+补帧</li>
+<li>WanAnimate-影视作品二创 人物替换</li>
+<li>ZFY-1111Wan Animate KJ V2版+Sec稳定自动遮罩视频换装</li>
+<li>ZFY-ZFY-1111Wan Animate KJ V2版+Sec稳定自动遮罩视频换装</li>
+<li>最新WanAnimate之视频换装</li>
+</ul></div>
+<div class="wf-group"><h4>19-GP-4o（5）</h4><ul>
+<li>FLUX-3D头像生成器</li>
+<li>GP-4O拍立得相片</li>
+<li>GP-4o儿童淡水彩手绘画</li>
+<li>GP-4o卡通3D盲盒生成器</li>
+<li>GP-4o微缩城市景观生成器</li>
+</ul></div>
+</div></details>
 
       <article class="card">
-        <div class="card-top"><h3>LTX2.3</h3><span class="ver">v9.3</span></div>
+        <div class="card-top"><h3>🎬 LTX2.3</h3><span class="ver">v9.6</span></div>
         <div class="tags"><span class="tag">视频生成</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
         <div class="core"><b>核心功能：</b>文生视频 · 图生视频 · 音频同步</div>
         <div class="feat"><span>WebUI 功能（17 项）：</span>文生视频 · 图生视频 · 多图参考 · 多图参考2 · 导演分镜 · 导演分镜MSR专业版 · 视频创作导演分镜2.0 · 分段提示词 · 首尾帧视频 · 音生视频 · 动作迁移 · 局部重绘 · 去水印/去字幕/去模糊 · 视频换脸 · 双人对话 · 漫剧生成</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>Qwen3-TTS</h3><span class="ver">v5.0</span></div>
+        <div class="card-top"><h3>🎙️ Qwen3-TTS</h3><span class="ver">v6.0</span></div>
         <div class="tags"><span class="tag">语音克隆</span><span class="tag">8G 显存</span><span class="tag ram">16G 内存</span></div>
         <div class="core"><b>核心功能：</b>声音克隆 · 多人对话 · 情绪控制</div>
         <div class="feat"><span>WebUI 功能：</span>声音克隆 · 音色创建 · 自定义语音 · 多人对话 · 情绪控制 · 全自动有声小说 · 双人对话 · IndexTTS2 · VoxCPM2 多引擎</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>SCAILV2</h3><span class="ver">4.0</span></div>
+        <div class="card-top"><h3>🏃 SCAILV2</h3><span class="ver">v6.1</span></div>
         <div class="tags"><span class="tag">动作迁移</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
         <div class="core"><b>核心功能：</b>人物替换 · 动作迁移 · 多图参考 · 换装</div>
         <div class="feat"><span>WebUI 功能（4 项）：</span>SCAIL人物替换/动作迁移 · 多图参考 · 官方多图参考 · TTP 多图参考换装</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>Klein_EditTOP</h3><span class="ver">图像编辑</span></div>
+        <div class="card-top"><h3>✂️ Klein_EditTOP</h3><span class="ver">图像编辑</span></div>
         <div class="tags"><span class="tag">图像编辑</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
         <div class="core"><b>核心功能：</b>Flux2-Klein 9B 最强图像编辑 · 换装/重绘/去水印/线稿上色</div>
         <div class="feat"><span>WebUI 功能：</span>换装提取 · 局部重绘 · 去水印 · 线稿上色 · 产品精修 · 扩图 · 批量生成 · 脸部替换 · 多图编辑 · 线稿转效果图 · 角色分镜批量生成</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>krea2</h3><span class="ver">3.0</span></div>
+        <div class="card-top"><h3>🎨 krea2</h3><span class="ver">v3.2</span></div>
         <div class="tags"><span class="tag">文生图</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
         <div class="core"><b>核心功能：</b>Krea2 文生图 · 图生图 · 图像克隆 · 参考编辑 · 3D 导演台</div>
         <div class="feat"><span>WebUI 功能（8 项）：</span>文生图 · 文生图加强版 · 图生图1-克隆 · 图生图2-参考 · 图生图3-编辑 · 图片编辑Beta · 图片编辑2测试版 · 人物动作姿势3D导演台</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>Qwen_ImageEdit</h3><span class="ver">v4.0</span></div>
+        <div class="card-top"><h3>🖌️ Qwen_ImageEdit</h3><span class="ver">v5.0</span></div>
         <div class="tags"><span class="tag">万物迁移</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
         <div class="core"><b>核心功能：</b>Qwen-Edit 万物迁移 · 多角度 · 模特换装 · 姿势迁移</div>
         <div class="feat"><span>WebUI 功能：</span>多角度生成 · 模特换装 · 脸部替换 · 姿势迁移 · 扩图 · 角色多视图 · 多图编辑 · 单图编辑 · 50 系优化 · Nunchaku 量化加速</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>Z-Image-White-AIO</h3><span class="ver">文生图</span></div>
+        <div class="card-top"><h3>🖼️ Z-Image-White-AIO</h3><span class="ver">文生图</span></div>
         <div class="tags"><span class="tag">文生图</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
         <div class="core"><b>核心功能：</b>Z-Image 高质量文生图 · 反推洗稿 · 多视角 · 角色三视图</div>
         <div class="feat"><span>WebUI 功能：</span>高质量文生图 · 图生图洗稿 · 反推提示词 · 多视角生成 · 角色三视图 · 多角度控制 · LORA 风格支持 · 4K 高清输出</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>Z_image_turbo</h3><span class="ver">v3.2</span></div>
+        <div class="card-top"><h3>⚡ Z_image_turbo</h3><span class="ver">v6.7</span></div>
         <div class="tags"><span class="tag">图像处理</span><span class="tag">8G 显存</span><span class="tag ram">16G 内存</span></div>
         <div class="core"><b>核心功能：</b>Z-Image 快速版 + FlashVSR / SeedVR 超分</div>
         <div class="feat"><span>WebUI 功能：</span>文生图 · 图生图 · 提示词管理 · FlashVSR 极速视频超分 · SeedVR2 高清放大 · 局部重绘 · 批量处理 · 图像编辑</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>Bernini</h3><span class="ver">3D</span></div>
+        <div class="card-top"><h3>🧊 Bernini</h3><span class="ver">3D</span></div>
         <div class="tags"><span class="tag">3D 生成</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
         <div class="core"><b>核心功能：</b>AI 3D 模型生成 · 文生 3D + 图生 3D</div>
         <div class="feat"><span>WebUI 功能：</span>文生3D · 图生3D · 导演控制模式 · 多风格3D生成 · 模型导出</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>ACEStep_HearMuLa</h3><span class="ver">音乐生成</span></div>
+        <div class="card-top"><h3>🎵 ACEStep_HearMuLa</h3><span class="ver">音乐生成</span></div>
         <div class="tags"><span class="tag">音乐/音频</span><span class="tag">8G 显存</span><span class="tag ram">16G 内存</span></div>
         <div class="core"><b>核心功能：</b>AI 音乐生成 · 音频处理 · 歌曲制作</div>
         <div class="feat"><span>WebUI 功能：</span>AI 音乐生成 · 音频处理 · 歌曲制作 · 多风格音乐 · 音频编辑</div>
@@ -185,69 +526,69 @@ a{color:inherit;text-decoration:none}
       
 
       <article class="card">
-        <div class="card-top"><h3>X-TTS</h3><span class="ver">v3.0</span></div>
+        <div class="card-top"><h3>🗣️ X-TTS</h3><span class="ver">v3.0</span></div>
         <div class="tags"><span class="tag">配音</span><span class="tag">8G 显存</span><span class="tag ram">16G 内存</span></div>
         <div class="core"><b>核心功能：</b>轻量级 TTS 配音工具</div>
         <div class="feat"><span>WebUI 功能：</span>文字转语音 · 多音色选择 · 快速生成 · 语音预览 · TTS 配音 · 音调调节</div>
       </article>
       <article class="card">
-        <div class="card-top"><h3>MiniMax H3 全能创作工作台</h3><span class="ver">v3.5</span></div>
+        <div class="card-top"><h3>🎥 MiniMax H3 全能创作工作台</h3><span class="ver">v3.5</span></div>
         <div class="tags"><span class="tag">多模态视频</span><span class="tag">24G 显存</span><span class="tag ram">32G 内存</span></div>
         <div class="core"><b>核心功能：</b>MiniMax H3 全模态生成 · 文生视频 · 图生视频 · 首尾帧 · 音画同步生成</div>
         <div class="feat"><span>WebUI 功能：</span>文生视频 · 图生视频 · 首尾帧视频 · 全模态多参（图片/视频/音频统一参考）· 提示词优化器 · 官方 Skills 创作台 · AI 批量创作台 · 10 槽 LoRA · 实时采样预览 · 显存管理 · Turbo / LightX2V 多档加速</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>ZFY-口播智能体</h3><span class="ver">数字人</span></div>
+        <div class="card-top"><h3>📣 ZFY-口播智能体</h3><span class="ver">数字人</span></div>
         <div class="tags"><span class="tag">数字人口播</span><span class="tag">8G 显存</span><span class="tag ram">16G 内存</span></div>
-        <div class="core"><b>核心功能：</b>AI 数字人口播 · 单图驱动 · 对口型 · 声音克隆</div>
-        <div class="feat"><span>WebUI 功能：</span>口播视频生成 · 图片驱动数字人 · 唇形同步 · 多音色 · 声音克隆 · 批量口播</div>
+        <div class="core"><b>核心功能：</b>本地 AI 口播智能体 · 文案仿写 · 声音克隆 · 音频/视频生成</div>
+        <div class="feat"><span>功能：</span>Qwen3-TTS / CosyVoice3 / OmniVoice 多引擎 · 声音克隆 · 多音色 · 情绪控制 · 全自动有声小说 · 双人对话 · 口播视频生成 · 对口型 · 长文本分段稳定生成 · CUDA Graph 加速 · 质量自检</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>Flux2Klein</h3><span class="ver">v2.0</span></div>
+        <div class="card-top"><h3>🌈 Flux2Klein</h3><span class="ver">v2.0</span></div>
         <div class="tags"><span class="tag">图像生成</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
         <div class="core"><b>核心功能：</b>Flux2-Klein 9B 文生图 · 图生图 · 图像编辑</div>
         <div class="feat"><span>WebUI 功能：</span>文生图 · 图生图 · 局部重绘 · LORA 风格支持 · 高清输出 · 批量生成</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>Ideogram</h3><span class="ver">v4</span></div>
+        <div class="card-top"><h3>📝 Ideogram</h3><span class="ver">v4</span></div>
         <div class="tags"><span class="tag">文生图</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
         <div class="core"><b>核心功能：</b>Ideogram 高质量文生图 · 精准文字渲染 · 多风格创作</div>
         <div class="feat"><span>WebUI 功能：</span>文生图 · 图生图 · 海报文字排版 · 多风格生成 · 局部修改</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>LTX2</h3><span class="ver">v7.6</span></div>
+        <div class="card-top"><h3>🎞️ LTX2</h3><span class="ver">v7.6</span></div>
         <div class="tags"><span class="tag">视频生成</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
         <div class="core"><b>核心功能：</b>LTX2 文生视频 · 图生视频 · 首尾帧 · 音视频同步</div>
         <div class="feat"><span>WebUI 功能：</span>文生视频 · 图生视频 · 首尾帧视频 · 视频编辑 · 批量生成</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>krea2+Boogu</h3><span class="ver">v2.6</span></div>
+        <div class="card-top"><h3>🧩 krea2+Boogu</h3><span class="ver">v2.6</span></div>
         <div class="tags"><span class="tag">文生图</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
         <div class="core"><b>核心功能：</b>Krea2 图像生成 · 参考编辑 · 图像克隆 · 多风格创作</div>
         <div class="feat"><span>WebUI 功能：</span>文生图 · 图生图 · 参考编辑 · 风格克隆 · 批量生成 · LORA 支持</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>SVI2Pro</h3><span class="ver">v8.0</span></div>
+        <div class="card-top"><h3>🔍 SVI2Pro</h3><span class="ver">v8.0</span></div>
         <div class="tags"><span class="tag">图像/视频增强</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
         <div class="core"><b>核心功能：</b>图像与视频高清增强 · 超分修复 · 细节还原</div>
         <div class="feat"><span>WebUI 功能：</span>图像增强 · 视频超分 · 高清修复 · 批量处理 · 画质提升</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>Wan2.2Remix</h3><span class="ver">v1.6</span></div>
+        <div class="card-top"><h3>🔄 Wan2.2Remix</h3><span class="ver">v1.6</span></div>
         <div class="tags"><span class="tag">视频生成</span><span class="tag">12G 显存</span><span class="tag ram">32G 内存</span></div>
         <div class="core"><b>核心功能：</b>Wan2.2 Remix 视频生成 · 图生视频 · 重绘与重混</div>
         <div class="feat"><span>WebUI 功能：</span>文生视频 · 图生视频 · 视频重绘 · 多风格转换 · 批量生成</div>
       </article>
 
       <article class="card">
-        <div class="card-top"><h3>Zimage_base</h3><span class="ver">v1.6</span></div>
+        <div class="card-top"><h3>🎯 Zimage_base</h3><span class="ver">v1.6</span></div>
         <div class="tags"><span class="tag">文生图</span><span class="tag">8G 显存</span><span class="tag ram">16G 内存</span></div>
         <div class="core"><b>核心功能：</b>Z-Image 文生图 · 图生图 · 反推提示词</div>
         <div class="feat"><span>WebUI 功能：</span>文生图 · 图生图 · 反推提示词 · 多风格 · 高清输出</div>
@@ -274,11 +615,34 @@ a{color:inherit;text-decoration:none}
 
 <footer class="footer">
   <div class="wrap contact">
-    <p>个人作品 · 交流分享</p>
-    <div class="big">微信：ZFY-AI160</div>
+    <p>本地 AI 产品矩阵 · 交流与产品服务</p>
+    <div class="big">视界星创 AI 全能创作</div>
     <p class="hint">添加微信请备注来意</p>
     <p class="hint"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">ICP备案号：鲁ICP备2026045652号-1</a></p>
   </div>
 </footer>
+<script>
+(() => {
+  const shots = [
+    {src:'assets/visionstar/home.webp',alt:'视界星创主页截图'},
+    {src:'assets/visionstar/workbench-empty.webp',alt:'视界星创工作台截图'},
+    {src:'assets/visionstar/workbench-progress.webp',alt:'视界星创生成中截图'},
+    {src:'assets/visionstar/canvas-assets.webp',alt:'视界星创无限画布截图'},
+    {src:'assets/visionstar/canvas-empty.webp',alt:'视界星创画布节点截图'},
+    {src:'assets/visionstar/engine-center.webp',alt:'视界星创引擎中心截图'}
+  ];
+  const main=document.querySelector('.shot-main img');
+  const box=document.querySelector('.shot-lightbox');
+  const preview=box?.querySelector('img');
+  const thumbs=document.querySelectorAll('.shot-thumb');
+  function selectShot(i){const shot=shots[i];if(!shot||!main)return;main.src=shot.src;main.alt=shot.alt;thumbs.forEach((b,n)=>b.classList.toggle('active',n===i));}
+  thumbs.forEach((b,i)=>b.addEventListener('click',()=>selectShot(i)));
+  document.querySelector('.shot-main')?.addEventListener('click',()=>{if(!box||!preview||!main)return;preview.src=main.src;preview.alt=main.alt;box.classList.add('open');box.setAttribute('aria-hidden','false');});
+  function closeBox(){if(!box)return;box.classList.remove('open');box.setAttribute('aria-hidden','true');}
+  document.querySelector('.shot-close')?.addEventListener('click',closeBox);
+  box?.addEventListener('click',e=>{if(e.target===box)closeBox();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBox();});
+})();
+</script>
 </body>
 </html>
